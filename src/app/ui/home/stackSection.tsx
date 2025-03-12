@@ -17,9 +17,9 @@ export default function StackSection({ stacks }: { stacks: Array<Stack> }) {
         <div className="w-full text-center lg:text-left mb-14">
           <h2 className="text-2xl font-semibold md:text-3xl lg:text-4xl">Les technos du futur que je maîtrise</h2>
           <p className="my-4 text-lightColor">
-            L'ensemble des langages, librairies et frameworks, code ou no code, que je connais et que je souhaite
-            proposer dans mes services... je suis bien sûr ouvert à de nouvelles découvertes et à l'apprentissage
-            d'autres technos si besoin pour votre projet !
+          All the languages, libraries and frameworks, code or no code, that I know and that I want to
+          offer in my services... I am of course open to new discoveries and learning
+          other technologies if needed for your project!
           </p>
 
           <Link
@@ -28,7 +28,7 @@ export default function StackSection({ stacks }: { stacks: Array<Stack> }) {
               transition duration-300 hover:bg-secondaryLight hover:text-lightColor focus:outline-none focus:ring
               focus:ring-yellow-400 xl:text-base"
           >
-            Discutons de votre projet
+            Let's discuss your project
           </Link>
         </div>
 

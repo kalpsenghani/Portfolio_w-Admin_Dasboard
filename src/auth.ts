@@ -10,8 +10,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
     Credentials({
       credentials: {
-        email: { label: "Email", type: "email", placeholder: "Bienvenue" },
-        password: { label: "Mot de passe", type: "password", placeholder: "******" },
+        email: { label: "Email", type: "email", placeholder: "Welcome" },
+        password: { label: "Password", type: "password", placeholder: "******" },
       },
       authorize: async (credentials): Promise<User | null> => {
         try {
@@ -20,8 +20,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           const user: UserCredentials | null = await getUserCredentials(email);
 
           if (!user) {
-            throw new Error("Mauvais IDs de connexion");
-          }
+            throw new Error("Bad login IDs");          }
 
           if (user && (await bcrypt.compare(password, user.password))) {
             return user;

@@ -51,7 +51,7 @@ export default function EditProjectForm({ stacks, edgestore }: { stacks: Array<S
       className="w-full space-y-4 rounded-lg border-2 p-8 shadow-lg backdrop-blur-md lg:col-span-3"
     >
       <label className="sr-only" htmlFor="name">
-        Titre *
+        Titte *
       </label>
       <input
         className="w-full rounded-lg border border-gray-200 bg-transparent p-3 text-sm"
@@ -65,7 +65,7 @@ export default function EditProjectForm({ stacks, edgestore }: { stacks: Array<S
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div>
           <label className="sr-only" htmlFor="client_name">
-            Nom du client
+          Customer Name
           </label>
           <input
             className="w-full rounded-lg border border-gray-200 bg-transparent p-3 text-sm"
@@ -78,7 +78,7 @@ export default function EditProjectForm({ stacks, edgestore }: { stacks: Array<S
         </div>
         <div>
           <label className="sr-only" htmlFor="preview_picture_url">
-            Image projet *
+          Project image *
           </label>
           <input
             className="w-full cursor-pointer rounded-lg border border-gray-200 bg-transparent p-3 text-sm file:mr-2
@@ -93,7 +93,7 @@ export default function EditProjectForm({ stacks, edgestore }: { stacks: Array<S
         </div>
         <div>
           <label className="sr-only" htmlFor="link">
-            Lien du projet *
+          Project link *
           </label>
           <input
             className="w-full rounded-lg border border-gray-200 bg-transparent p-3 text-sm"
@@ -106,7 +106,7 @@ export default function EditProjectForm({ stacks, edgestore }: { stacks: Array<S
         </div>
         <div>
           <label className="sr-only" htmlFor="github_repo">
-            Repo Github
+          Github Repo
           </label>
           <input
             className="w-full rounded-lg border border-gray-200 bg-transparent p-3 text-sm"
@@ -157,7 +157,7 @@ export default function EditProjectForm({ stacks, edgestore }: { stacks: Array<S
             checked={status === "En cours de développement"}
             onChange={handleStatusChange}
           />
-          <span className="text-sm"> En cours de développement </span>
+          <span className="text-sm"> Under development </span>
         </label>
       </fieldset>
 
@@ -177,7 +177,7 @@ export default function EditProjectForm({ stacks, edgestore }: { stacks: Array<S
         ></textarea>
       </div>
       <label htmlFor="stacks_id" className="flex flex-col gap-2 text-center">
-        Technos du projet
+      Project technologies
         <select
           name="stacks_id"
           id="stacks_id"
@@ -197,7 +197,7 @@ export default function EditProjectForm({ stacks, edgestore }: { stacks: Array<S
         className="mt-4 flex w-full cursor-pointer flex-col gap-2 rounded-lg border border-gray-200 bg-transparent p-3
           text-center text-base font-medium"
       >
-        Publier le projet ?
+        Publish the project?
         <input type="checkbox" id="published" name="published" defaultChecked={projectToModify?.published} />
       </label>
 
@@ -207,7 +207,7 @@ export default function EditProjectForm({ stacks, edgestore }: { stacks: Array<S
           className="rounded-lg bg-secondaryColor px-6 py-3 font-medium text-darkColor duration-300
             hover:bg-secondaryLight hover:text-lightColor sm:w-auto"
         >
-          Mettre à jour ce projet
+          Update this project
         </button>
       </div>
     </form>

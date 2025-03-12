@@ -51,7 +51,7 @@ export default function ProjectCard({ project }: { project: ProjectWithStacks })
                   className="mt-8 font-bold text-secondaryColor drop-shadow-[1px_2px_2px_rgba(0,0,0,0.75)] duration-300
                     hover:text-secondaryLight"
                 >
-                  Voir le repo Github
+                  View the Github repo
                 </Link>
               </li>
             )}
@@ -63,7 +63,7 @@ export default function ProjectCard({ project }: { project: ProjectWithStacks })
                   className="mt-8 font-bold text-secondaryColor drop-shadow-[1px_2px_2px_rgba(0,0,0,0.75)] duration-300
                     hover:text-secondaryLight"
                 >
-                  Voir le projet
+                  See the project
                 </Link>
               </li>
             )}

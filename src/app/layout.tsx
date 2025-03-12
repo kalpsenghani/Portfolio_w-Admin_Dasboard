@@ -6,7 +6,7 @@ import "./globals.css";
 import ogImage from "../../public/opengraph-image.png";
 import twitterImage from "../../public/twitter-image.png";
 import { EdgeStoreProvider } from "@/lib/edgestore";
-import { SanityLive } from "@/sanity/client";
+import { SanityLive } from "../../sanity/client";
 
 const personStructuredData: WithContext<Person> = {
   "@context": "https://schema.org",

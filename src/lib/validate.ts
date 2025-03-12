@@ -9,7 +9,7 @@ export const ProjectSchema = object({
   link: string(),
   github_repo: string(),
   published: boolean(),
-  status: zEnum(["Terminé", "En cours de développement"]),
+  status: zEnum(["Completed", "In development"]),
   stacks_id: array(string()),
   date: string(),
 });

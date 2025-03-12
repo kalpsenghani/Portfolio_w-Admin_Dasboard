@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { sanityService } from "@/sanity/client";
+import { sanityService } from "../../../../../sanity/client";
 import ContactForm from "@/app/ui/home/contactForm";
 
 export default async function page({ params }: { params: { category: string } }) {

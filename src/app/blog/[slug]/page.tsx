@@ -1,6 +1,6 @@
 "use server";
 
-import { sanityService } from "@/sanity/client";
+import { sanityService } from "../../../../sanity/client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";

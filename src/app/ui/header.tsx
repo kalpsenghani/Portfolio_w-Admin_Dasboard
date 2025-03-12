@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import logo from "./images/logoLight.png";
+import logo from "./images/logoDark.png";
 import Link from "next/link";
 
 export default function Header() {

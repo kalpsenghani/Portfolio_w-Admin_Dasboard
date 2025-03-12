@@ -25,7 +25,7 @@ export default function AddStackForm({ edgestore }: { edgestore: MyEdgeStoreRout
       className="w-full space-y-4 rounded-lg border-2 p-8 shadow-lg backdrop-blur-md lg:col-span-3"
     >
       <label className="sr-only" htmlFor="name">
-        Nom *
+      Name *
       </label>
       <input
         className="w-full rounded-lg border border-gray-200 bg-transparent p-3 text-sm"
@@ -37,7 +37,7 @@ export default function AddStackForm({ edgestore }: { edgestore: MyEdgeStoreRout
       />
       <div>
         <label className="sr-only" htmlFor="stack_link">
-          Lien de la techno *
+        Techno Link *
         </label>
         <input
           className="w-full rounded-lg border border-gray-200 bg-transparent p-3 text-sm"
@@ -50,7 +50,7 @@ export default function AddStackForm({ edgestore }: { edgestore: MyEdgeStoreRout
       </div>
       <div>
         <label className="sr-only" htmlFor="logo">
-          Image projet *
+        Project image *
         </label>
         <input
           className="w-full cursor-pointer rounded-lg border border-gray-200 bg-transparent p-3 text-sm file:mr-2
@@ -69,7 +69,7 @@ export default function AddStackForm({ edgestore }: { edgestore: MyEdgeStoreRout
           className="rounded-lg bg-secondaryColor px-6 py-3 font-medium text-darkColor duration-300
             hover:bg-secondaryLight hover:text-lightColor sm:w-auto"
         >
-          Enregistrer cette techno
+          Save this tech
         </button>
       </div>
     </form>

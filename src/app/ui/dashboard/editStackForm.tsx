@@ -45,7 +45,7 @@ export default function EditStackForm({ edgestore }: { edgestore: MyEdgeStoreRou
       className="w-full space-y-4 rounded-lg border-2 p-8 shadow-lg backdrop-blur-md lg:col-span-3"
     >
       <label className="sr-only" htmlFor="name">
-        Nom *
+        Name *
       </label>
       <input
         className="w-full rounded-lg border border-gray-200 bg-transparent p-3 text-sm"
@@ -57,7 +57,7 @@ export default function EditStackForm({ edgestore }: { edgestore: MyEdgeStoreRou
       />
       <div>
         <label className="sr-only" htmlFor="logo">
-          Image projet *
+        Project image *
         </label>
         <input
           className="w-full cursor-pointer rounded-lg border border-gray-200 bg-transparent p-3 text-sm file:mr-2
@@ -79,7 +79,7 @@ export default function EditStackForm({ edgestore }: { edgestore: MyEdgeStoreRou
       </div>
       <div>
         <label className="sr-only" htmlFor="stack_link">
-          Lien de la techno *
+        Techno Link *
         </label>
         <input
           className="w-full rounded-lg border border-gray-200 bg-transparent p-3 text-sm"
@@ -96,7 +96,7 @@ export default function EditStackForm({ edgestore }: { edgestore: MyEdgeStoreRou
           className="rounded-lg bg-secondaryColor px-8 py-3 font-medium text-darkColor duration-300
             hover:bg-secondaryLight hover:text-lightColor sm:w-auto"
         >
-          Mettre à jour cette techno
+          Update this technology
         </button>
       </div>
     </form>

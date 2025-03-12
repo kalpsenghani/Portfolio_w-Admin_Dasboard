@@ -28,7 +28,7 @@ export default function HeaderDashboard({ login }: { login?: boolean }) {
             dark:hover:text-white/75"
           href="/"
         >
-          Retour à l'accueil
+          Back to home
         </Link>
         {login && <SignOutButton />}
       </nav>

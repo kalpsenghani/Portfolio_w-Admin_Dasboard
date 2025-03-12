@@ -93,7 +93,7 @@ export function ResetProjectButton() {
         hover:text-darkColor"
       onClick={handleResetProject}
     >
-      Ajouter un projet
+      Add a project
     </button>
   );
 }
@@ -110,7 +110,7 @@ export function ResetStackButton() {
           hover:text-darkColor"
       onClick={handleResetStack}
     >
-      Ajouter une techno
+      Add a technology
     </button>
   );
 }
@@ -139,7 +139,7 @@ export function DeleteStackButton({ id, logo }: { id: number; logo: string }) {
       className="rounded-md border p-2 duration-300 hover:border-secondaryColor hover:bg-secondaryColor
           hover:text-darkColor"
     >
-      Supprimer
+      DELETE
     </button>
   );
 }
@@ -166,7 +166,7 @@ export function UpdateStackButton({ id }: { id: number }) {
       onClick={handleUpdate}
       href="#form"
     >
-      Mettre à jour
+      To update
     </Link>
   );
 }

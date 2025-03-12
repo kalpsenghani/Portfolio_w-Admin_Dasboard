@@ -30,7 +30,7 @@ export default function AddProjectForm({ stacks, edgestore }: { stacks: Array<St
       className="w-full space-y-4 rounded-lg border-2 p-8 shadow-lg backdrop-blur-md lg:col-span-3"
     >
       <label className="sr-only" htmlFor="name">
-        Titre *
+        Titte *
       </label>
       <input
         className="w-full rounded-lg border border-gray-200 bg-transparent p-3 text-sm"
@@ -43,7 +43,7 @@ export default function AddProjectForm({ stacks, edgestore }: { stacks: Array<St
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div>
           <label className="sr-only" htmlFor="phone">
-            Nom du client
+          Customer Name
           </label>
           <input
             className="w-full rounded-lg border border-gray-200 bg-transparent p-3 text-sm"
@@ -55,7 +55,7 @@ export default function AddProjectForm({ stacks, edgestore }: { stacks: Array<St
         </div>
         <div>
           <label className="sr-only" htmlFor="phone">
-            Image projet *
+          Project image *
           </label>
           <input
             className="w-full cursor-pointer rounded-lg border border-gray-200 bg-transparent p-3 text-sm file:mr-2
@@ -70,7 +70,7 @@ export default function AddProjectForm({ stacks, edgestore }: { stacks: Array<St
         </div>
         <div>
           <label className="sr-only" htmlFor="phone">
-            Lien du projet *
+          Project link *
           </label>
           <input
             className="w-full rounded-lg border border-gray-200 bg-transparent p-3 text-sm"
@@ -82,7 +82,7 @@ export default function AddProjectForm({ stacks, edgestore }: { stacks: Array<St
         </div>
         <div>
           <label className="sr-only" htmlFor="phone">
-            Repo Github
+            Github Repo
           </label>
           <input
             className="w-full rounded-lg border border-gray-200 bg-transparent p-3 text-sm"
@@ -114,7 +114,7 @@ export default function AddProjectForm({ stacks, edgestore }: { stacks: Array<St
             onChange={handleChange}
           />
 
-          <span className="text-sm"> Terminé </span>
+          <span className="text-sm"> Finished </span>
         </label>
         <label
           htmlFor="working"
@@ -134,7 +134,7 @@ export default function AddProjectForm({ stacks, edgestore }: { stacks: Array<St
             onChange={handleChange}
           />
 
-          <span className="text-sm"> En cours de développement </span>
+          <span className="text-sm"> Under development </span>
         </label>
       </fieldset>
 
@@ -153,7 +153,7 @@ export default function AddProjectForm({ stacks, edgestore }: { stacks: Array<St
         ></textarea>
       </div>
       <label htmlFor="stacks_id" className="flex flex-col gap-2 text-center">
-        Technos du projet
+      Project technologies
         <select
           name="stacks_id"
           id="stacks_id"
@@ -172,7 +172,7 @@ export default function AddProjectForm({ stacks, edgestore }: { stacks: Array<St
         className="mt-4 flex w-full cursor-pointer flex-col gap-2 rounded-lg border border-gray-200 bg-transparent p-3
           text-center text-base font-medium"
       >
-        Publier le projet ?
+        Publish the project?
         <input type="checkbox" id="published" name="published" />
       </label>
 
@@ -182,7 +182,7 @@ export default function AddProjectForm({ stacks, edgestore }: { stacks: Array<St
           className="rounded-lg bg-secondaryColor px-6 py-3 font-medium text-darkColor duration-300
             hover:bg-secondaryLight hover:text-lightColor sm:w-auto"
         >
-          Enregistrer ce projet
+          Save this project
         </button>
       </div>
     </form>

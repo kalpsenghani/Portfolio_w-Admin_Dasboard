@@ -13,8 +13,8 @@ export default function ExperienceSection() {
           <h2 className="text-center text-3xl font-bold md:text-4xl">Mon expérience</h2>
 
           <p className="mt-4 text-center leading-8 text-gray-300">
-            Ancien fusilier parachutiste passionné par le monde du web et l'entrepreneuriat, je me suis reconverti comme
-            développeur web freelance. Je développe aussi mes propres logiciels notamment LinkerFlow, mon projet actuel.
+          A former paratrooper with a passion for the web and entrepreneurship, I became a freelance web developer. 
+          I also develop my own software, including LinkerFlow, my current project.
           </p>
         </hgroup>
 
@@ -41,7 +41,7 @@ export default function ExperienceSection() {
             </span>
 
             <div>
-              <h3 className="mb-4 text-lg font-bold">LinkerFlow, SaaS outil Webflow</h3>
+              <h3 className="mb-4 text-lg font-bold">LinkerFlow, SaaS Webflow tool</h3>
 
               <p className="mt-1 text-sm leading-6 text-gray-300">
                 J'ai développé{" "}
@@ -53,8 +53,8 @@ export default function ExperienceSection() {
                 >
                   Linkerflow
                 </Link>
-                , un outil Webflow afin d'automatiser le maillage interne, méthode chronophage pourtant primordial pour
-                le <strong>référencement</strong> des sites web.
+                , a Webflow tool to automate internal linking, a time-consuming method that is nevertheless essential for
+                <strong>SEO</strong> of websites.
               </p>
             </div>
           </div>
@@ -86,11 +86,9 @@ export default function ExperienceSection() {
               <h3 className="mb-4 text-lg font-bold">Formation développeur JS, Wild Code School</h3>
 
               <p className="mt-1 text-sm leading-6 text-gray-300">
-                J'ai suivi durant 5 mois (Février à Juillet 2024) une formation intensive de développeur web où j'ai pu
-                apprendre en plus des technologies React / Express / Node.js / MySQL / Git et Github, des compétences
-                dans l'
-                <strong>accéssibilité web</strong>, les méthodes Agile telles que Scrum et surtout le travail en équipe
-                sur plusieurs projets.
+              I completed an intensive 5-month web developer training program (February to July 2024) where I was able to learn React / Express / Node.js / MySQL / Git and Github technologies, as well as skills in
+              <strong>web accessibility</strong>, Agile methods such as Scrum and especially teamwork
+              on several projects.
               </p>
             </div>
           </div>
@@ -117,22 +115,22 @@ export default function ExperienceSection() {
             </span>
 
             <div>
-              <h3 className="mb-4 text-lg font-bold">Agence No Code, mon agence Webflow</h3>
+              <h3 className="mb-4 text-lg font-bold">No Code Agency, my Webflow agency</h3>
 
               <p className="mt-1 text-sm leading-6 text-gray-300">
-                De fin 2023 à 2024, j'ai travaillé dur afin de trouver des clients en tant que freelance développeur
-                Webflow, j'ai souhaité mettre en pratique mes compétences en <strong>référencement</strong>{" "}
+              From late 2023 to 2024, I worked hard to find clients as a freelance developer.
+              Webflow, I wanted to put my SEO skills into practice.
                 <abbr title="Search Engine Optimization"> (SEO) </abbr>
-                afin de faire monter mon propre site d'Agence Webflow ({" "}
+                in order to build my own Webflow Agency site ({" "}
                 <Link
                   href="https://www.agencenocode.com/"
                   target="_blank"
                   rel="noreferrer"
                   className="text-primaryColor duration-300 hover:text-primaryLight"
                 >
-                  Agence No Code
+                  Agency No Code
                 </Link>{" "}
-                ) , sur lequel je travaille aujourd'hui avec des partenaires en tant que freelance.
+                ) , on which I am now working with partners as a freelancer.
               </p>
             </div>
           </div>
@@ -159,10 +157,10 @@ export default function ExperienceSection() {
             </span>
 
             <div>
-              <h3 className="mb-4 text-lg font-bold">Spylead, Site de listing produit tech</h3>
+              <h3 className="mb-4 text-lg font-bold">Spylead, Tech Product Listing Site</h3>
 
               <p className="mt-1 text-sm leading-6 text-gray-300">
-                Nous avons développé sur Webflow avec un associé,
+              We developed on Webflow with an associate,
                 <Link
                   href="https://www.spylead.com/"
                   target="_blank"
@@ -172,7 +170,7 @@ export default function ExperienceSection() {
                   {" "}
                   Spylead{" "}
                 </Link>
-                , un site de listing de produit tech, tel que les scraper google maps, les fournisseurs d'adresses IP...
+                , a tech product listing site, such as Google Maps scrapers, IP address providers, etc.
               </p>
             </div>
           </div>
@@ -199,12 +197,12 @@ export default function ExperienceSection() {
             </span>
 
             <div>
-              <h3 className="mb-4 text-lg font-bold">Développeur Webflow freelance</h3>
+              <h3 className="mb-4 text-lg font-bold">Freelance Webflow Developer</h3>
 
               <p className="mt-1 text-sm leading-6 text-gray-300">
-                Lors de la fin de mon contrat j'ai souhaité me reconvertir dans le web, pour cela je me suis formé en
-                autodidacte sur Webflow et j'ai pu proposer mes services en tant que développeur{" "}
-                <strong>Webflow</strong> freelance.
+              When my contract ended, I wanted to retrain in the web, for this I trained in
+              self-taught on Webflow and I was able to offer my services as a developer{" "}
+              <strong>Webflow</strong> freelance.
               </p>
             </div>
           </div>
@@ -228,11 +226,11 @@ export default function ExperienceSection() {
             </span>
 
             <div>
-              <h3 className="mb-4 text-lg font-bold">Fusilier parachutiste, Armée de l'Air</h3>
+              <h3 className="mb-4 text-lg font-bold">Parachute Rifleman, Air Force</h3>
               <p className="mt-1 text-sm leading-6 text-gray-300">
-                Après plus d'un an de réserve je m'engage en tant qu'élève pilote dans l'Armée de l'Air en 2017...
-                Souhaitant plus d'action et de travail physique je change de spécialité pour rentrer chez les fusiliers
-                parachutistes et j'ai effectué de nombreux stages de formations au cours de plus de 6 ans de services.
+              After more than a year in the reserve, I joined the Air Force as a student pilot in 2017...
+              Wanting more action and physical work, I changed my specialty to join the fusiliers.
+              parachutists and I have completed numerous training courses over the course of more than 6 years of service.
               </p>
             </div>
           </div>

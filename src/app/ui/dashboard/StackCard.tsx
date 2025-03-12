@@ -19,7 +19,7 @@ export default function StackCard({ stack }: { stack: Stack }) {
         rel="noreferrer"
         className="p-2 mt-4 mx-auto text-center text-sm sm:text-base"
       >
-        Voir page
+        See page
       </a>
       <div className="flex items-center gap-2 justify-evenly">
         <DeleteStackButton id={stack.id} logo={stack.logo} />

@@ -17,14 +17,13 @@ export default async function HeroSection() {
           className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold
             leading-8 text-transparent sm:text-4xl md:text-5xl"
         >
-          Bienvenue sur mon Portfolio
           <span className="block">
-            Moi c'est Franck, <br />
-            <strong>Développeur Web Next.js</strong>
+          I'm Kalp Senghani,<br />
+            <strong>Full Stack Developer</strong>
           </span>
         </h1>
         <p className="mx-auto max-w-xl sm:text-xl/relaxed">
-          Entrepreneur et développeur Typescript fullstack freelance au service de votre entreprise
+        "As a Full Stack Developer, I see technology as a tool to transform ideas into impactful solutions. With experience in JavaScript, React, Node.js, and Python, my motivation comes from creating efficient and user-centric applications.I focus on delivering high-quality results and continuously evolving my skills to stay at the forefront of innovation."
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <a
@@ -36,7 +35,7 @@ export default async function HeroSection() {
               hover:bg-transparent hover:text-lightColor focus:outline-none focus:ring active:text-opacity-75 xl:text-base"
             download
           >
-            Télécharger mon CV
+            Download my CV
           </a>
           <Link
             className="block w-10/12 rounded-full md:w-auto border border-secondaryColor px-12 py-3 text-sm font-medium
@@ -44,7 +43,7 @@ export default async function HeroSection() {
               focus:ring active:bg-blue-500 xl:text-base"
             href="#projects"
           >
-            Voir mes projets
+            See my projects
           </Link>
         </div>
       </div>
