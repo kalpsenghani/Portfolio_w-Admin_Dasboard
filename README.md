@@ -93,7 +93,7 @@ Contributions are welcome! If you would like to make improvements or fix bugs, p
 
 ## Contact
 
-Franck
+Kalp Senghani
 
-- Email: contact@franckwebpro.com
-- LinkedIn: [Franck](https://www.linkedin.com/in/franck-galliod/)
+- Email: kalpsenghani0601@gmail.com
+- LinkedIn: [Franck](https://www.linkedin.com/in/kalp-senghani-899958233/)
