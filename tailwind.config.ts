@@ -37,9 +37,31 @@ const config: Config = {
             WebkitBackdropFilter: "blur(10px) contrast(60%)",
           },
         },
+        float: {
+          '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+          '50%': { transform: 'translateY(-20px) rotate(5deg)' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'scale(0.95)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        glow: {
+          '0%': {
+            'box-shadow': '0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--secondaryColor), 0 0 20px var(--secondaryColor)',
+          },
+          '100%': {
+            'box-shadow': '0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--secondaryColor), 0 0 40px var(--secondaryColor)',
+          },
+        },
       },
       animation: {
         blur: "blur 0.5s ease-in-out forwards",
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'float-slow': 'float 8s ease-in-out infinite',
+        'float-delayed': 'float 7s ease-in-out infinite',
+        'fadeIn': 'fadeIn 1s ease-in forwards',
+        'glow': 'glow 2s ease-in-out infinite alternate',
       },
     },
   },

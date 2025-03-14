@@ -1,37 +1,40 @@
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import SignOutButton from "../login/signOutButton";
 import logo from "../images/logoLight.png";
-import { SignOutButton } from "../login/signOutButton";
 
-export default function HeaderDashboard({ login }: { login?: boolean }) {
+export default function HeaderDashboard({ login }: { login: boolean }) {
   return (
-    <header className="fixed top-0 z-50 mx-auto h-16 w-full animate-blur md:h-20">
-      <nav className="mx-auto grid h-16 w-full max-w-screen-2xl grid-cols-[0.25fr,2fr,0.25fr] items-center justify-between">
-        <div className="md:flex md:items-center md:gap-12">
-          <Link className="block text-teal-600 dark:text-teal-600" href="/">
-            <span className="sr-only">Home</span>
-            <Image
-              src={logo}
-              alt="logo FranckWebPro"
-              className="~h-16/20 ~w-16/20"
-              width={80}
-              height={80}
-              sizes="(max-width: 768px) 4rem, (max-width: 1200px) 5rem, 6rem"
-              priority
-            />
-          </Link>
-        </div>
-
-        <Link
-          className="text-center text-lightColor transition duration-300 hover:text-secondaryColor dark:text-white
-            dark:hover:text-white/75"
-          href="/"
-        >
-          Back to home
+    <header className="fixed z-50 w-full bg-darkColor/80 backdrop-blur-md">
+      <div className="mx-auto flex h-16 max-w-screen-2xl items-center justify-between gap-8 px-4 sm:px-6 lg:px-8">
+        <Link className="block" href="/">
+          <Image src={logo} alt="logo FranckWebPro" width={40} height={40} />
         </Link>
-        {login && <SignOutButton />}
-      </nav>
+        <div className="flex items-center justify-end gap-4">
+          <nav aria-label="Global" className="hidden md:block">
+            <ul className="flex items-center gap-6 text-sm">
+              <li>
+                <Link
+                  className="transition duration-300 text-lightColor hover:text-primaryLight"
+                  href="/"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="transition duration-300 text-lightColor hover:text-primaryLight"
+                  href="/#projects"
+                >
+                  Projects
+                </Link>
+              </li>
+            </ul>
+          </nav>
+          {login && <SignOutButton />}
+        </div>
+      </div>
     </header>
   );
 }

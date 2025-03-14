@@ -1,12 +1,17 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import logo from "./images/logoDark.png";
 import Link from "next/link";
 
 export default function Header() {
   const [navIsOpen, setNavIsOpen] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
 
   const handleMobileMenu = () => {
     setNavIsOpen(!navIsOpen);
@@ -23,16 +28,28 @@ export default function Header() {
         className="m-auto flex h-16 w-full max-w-screen-2xl items-center justify-between shadow-white/5 shadow-lg lg:top-6 
       lg:h-20 lg:max-w-screen-lg lg:mx-auto lg:bg-white/5 lg:backdrop-blur-lg lg:rounded-full"
       >
-        <Link className="z-20 text-teal-600 dark:text-teal-600" href="/">
+        <Link 
+          className={`z-20 text-teal-600 dark:text-teal-600 relative group ${
+            isLoaded ? 'animate-fadeIn' : 'opacity-0'
+          }`} 
+          href="/"
+        >
           <span className="sr-only">Home</span>
-          <Image
-            src={logo}
-            alt="logo FranckWebPro"
-            className="~h-16/20 ~w-16/20"
-            width={80}
-            height={80}
-            sizes="(max-width: 768px) 4rem, (max-width: 1200px) 5rem, 6rem"
-          />
+          {/* Glow effect container */}
+          <div className="absolute inset-0 rounded-full bg-secondaryColor/20 blur-xl scale-150 opacity-0 
+            group-hover:opacity-100 transition-all duration-700 animate-pulse"></div>
+          
+          {/* Logo image */}
+          <div className="relative transform transition-transform duration-300 group-hover:scale-110">
+            <Image
+              src={logo}
+              alt="logo FranckWebPro"
+              className="~h-16/20 ~w-16/20 transition-all duration-300"
+              width={80}
+              height={80}
+              sizes="(max-width: 768px) 4rem, (max-width: 1200px) 5rem, 6rem"
+            />
+          </div>
         </Link>
         <ul
           className={`absolute inset-0 z-10 flex h-screen w-full list-none flex-col items-center justify-evenly
@@ -48,7 +65,7 @@ export default function Header() {
               href="/#services"
               onClick={() => navIsOpen && handleMobileMenu()}
             >
-              Services
+              Certifications
             </Link>
           </li>
           <li>
@@ -58,7 +75,7 @@ export default function Header() {
               href="/#experiences"
               onClick={() => navIsOpen && handleMobileMenu()}
             >
-              Expériences
+              Education
             </Link>
           </li>
 
@@ -69,7 +86,7 @@ export default function Header() {
               href="/#technos"
               onClick={() => navIsOpen && handleMobileMenu()}
             >
-              Technos
+              Tech Stack
             </Link>
           </li>
 
@@ -80,7 +97,7 @@ export default function Header() {
               href="/#projects"
               onClick={() => navIsOpen && handleMobileMenu()}
             >
-              Projets
+              Projects
             </Link>
           </li>
           <li>
@@ -90,7 +107,7 @@ export default function Header() {
               href="/blog"
               onClick={() => navIsOpen && handleMobileMenu()}
             >
-              Blog
+              Experience
             </Link>
           </li>
         </ul>
@@ -102,7 +119,7 @@ export default function Header() {
           href="/#contact"
           onClick={() => navIsOpen && handleMobileMenu()}
         >
-          Me contacter
+          Contact Me
         </Link>
 
         <button

@@ -11,7 +11,7 @@ export default function NotFound() {
         className="mt-4 rounded-md bg-secondaryColor px-4 py-2 text-sm text-darkColor transition-colors
           hover:bg-secondaryLight hover:text-lightColor"
       >
-        Retour à l'accueil
+        Back to home
       </Link>
     </main>
   );

@@ -27,7 +27,7 @@ export default async function HeroSection() {
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <a
-            href="/CVFG.pdf"
+            href="/Kalp Full Stack.pdf"
             target="_blank"
             rel="noreferrer"
             className="block w-10/12 md:w-auto rounded-full border-2 border-transparent bg-secondaryColor px-12 py-3 text-sm

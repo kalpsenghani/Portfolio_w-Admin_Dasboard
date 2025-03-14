@@ -9,7 +9,7 @@ export const ProjectSchema = object({
   link: string(),
   github_repo: string(),
   published: boolean(),
-  status: zEnum(["Completed", "In development"]),
+  status: zEnum(["Completed", "Under development"]),
   stacks_id: array(string()),
   date: string(),
 });
@@ -34,6 +34,6 @@ export const signInSchema = object({
   email: string({ required_error: "Email is required" }).min(1, "Email is required").email("Invalid email"),
   password: string({ required_error: "Password is required" })
     .min(1, "Password is required")
-    .min(8, "Password must be more than 8 characters")
+    .min(6, "Password must be at least 6 characters")
     .max(32, "Password must be less than 32 characters"),
 });

@@ -24,7 +24,7 @@ export function TogglePublicationButton({ id, published }: { id: number; publish
       className="rounded-md border p-2 duration-300 hover:border-secondaryColor hover:bg-secondaryColor
         hover:text-darkColor"
     >
-      {published ? "Dépublier" : "Publier"}
+      {published ? "Unpublish": "Publish"}
     </button>
   );
 }
@@ -33,7 +33,7 @@ export function DeleteProjectButton({ id, preview_picture_url }: { id: number; p
   const { edgestore } = useEdgeStore();
   const handleDelete = async () => {
     try {
-      if (confirm("Supprimer ce projet ?")) {
+      if (confirm("Delete this project?")) {
         await edgestore.myPublicImages.delete({
           url: preview_picture_url,
         });
@@ -76,7 +76,7 @@ export function UpdateProjectButton({ id }: { id: number }) {
       onClick={handleUpdate}
       href="#form"
     >
-      Mettre à jour
+      To update
     </Link>
   );
 }
@@ -121,7 +121,7 @@ export function DeleteStackButton({ id, logo }: { id: number; logo: string }) {
 
   const handleDelete = async () => {
     try {
-      if (confirm("Supprimer cette stack ?")) {
+      if (confirm("Delete this stack?")) {
         await edgestore.myPublicImages.delete({
           url: logo,
         });

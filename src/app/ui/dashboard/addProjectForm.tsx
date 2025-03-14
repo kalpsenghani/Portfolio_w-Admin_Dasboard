@@ -10,6 +10,11 @@ export default function AddProjectForm({ stacks, edgestore }: { stacks: Array<St
     event.preventDefault();
     const form = event.currentTarget;
     const formData = new FormData(event.currentTarget);
+    
+    // Map the status to the correct value
+    const status = isChecked === "finished" ? "Completed" : "Under development";
+    formData.set('status', status);
+    
     const file = formData.get("preview_picture_url") as File | null;
     if (file) {
       const res = await edgestore.myPublicImages.upload({ file });
@@ -34,7 +39,7 @@ export default function AddProjectForm({ stacks, edgestore }: { stacks: Array<St
       </label>
       <input
         className="w-full rounded-lg border border-gray-200 bg-transparent p-3 text-sm"
-        placeholder="Titre *"
+        placeholder="Title *"
         type="text"
         id="title"
         name="title"
@@ -47,7 +52,7 @@ export default function AddProjectForm({ stacks, edgestore }: { stacks: Array<St
           </label>
           <input
             className="w-full rounded-lg border border-gray-200 bg-transparent p-3 text-sm"
-            placeholder="Nom du client"
+            placeholder="Customer Name"
             type="text"
             id="client_name"
             name="client_name"
@@ -60,7 +65,7 @@ export default function AddProjectForm({ stacks, edgestore }: { stacks: Array<St
           <input
             className="w-full cursor-pointer rounded-lg border border-gray-200 bg-transparent p-3 text-sm file:mr-2
               file:border-none"
-            placeholder="Image du projet *"
+            placeholder="Project image *"
             type="file"
             accept="image/*"
             id="preview_picture_url"
@@ -74,7 +79,7 @@ export default function AddProjectForm({ stacks, edgestore }: { stacks: Array<St
           </label>
           <input
             className="w-full rounded-lg border border-gray-200 bg-transparent p-3 text-sm"
-            placeholder="Lien du projet"
+            placeholder="Project link"
             type="text"
             name="link"
             id="link"
@@ -86,7 +91,7 @@ export default function AddProjectForm({ stacks, edgestore }: { stacks: Array<St
           </label>
           <input
             className="w-full rounded-lg border border-gray-200 bg-transparent p-3 text-sm"
-            placeholder="Repo Github"
+            placeholder="Github Repo"
             type="text"
             name="github_repo"
             id="github_repo"
@@ -95,7 +100,7 @@ export default function AddProjectForm({ stacks, edgestore }: { stacks: Array<St
       </div>
 
       <fieldset className="grid grid-cols-1 gap-4 text-center sm:grid-cols-2">
-        <legend className="mb-3">Status du projet</legend>
+        <legend className="mb-3">Project status</legend>
         <label
           htmlFor="finished"
           className="block w-full cursor-pointer rounded-lg border-2 border-gray-200 p-3 duration-300
@@ -109,7 +114,7 @@ export default function AddProjectForm({ stacks, edgestore }: { stacks: Array<St
             type="radio"
             tabIndex={-1}
             name="status"
-            value="Terminé"
+            value="Finished"
             checked={isChecked === "finished"}
             onChange={handleChange}
           />
@@ -129,7 +134,7 @@ export default function AddProjectForm({ stacks, edgestore }: { stacks: Array<St
             type="radio"
             tabIndex={-1}
             name="status"
-            value="En cours de développement"
+            value="Under development"
             checked={isChecked === "development"}
             onChange={handleChange}
           />

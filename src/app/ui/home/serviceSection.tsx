@@ -5,84 +5,81 @@ export default function ServiceSection() {
   return (
     <section
       id="services"
-      className="mx-auto flex min-h-[calc(100vh-4rem)] items-center justify-center bg-glassmorphism bg-no-repeat
-        py-32 md:min-h-[calc(100vh-5rem)]"
+      className="mx-auto flex min-h-[calc(100vh-4rem)] flex-col items-center justify-start bg-glassmorphism bg-no-repeat
+        py-16 md:min-h-[calc(100vh-5rem)]"
     >
-      <div
-        className="max-w-screen-2xl flex flex-col gap-4 lg:gap-0 lg:flex-row p-4 md:p-8 lg:p-12 lg:py-16 lg:grid-cols-2
-          lg:items-center lg:gap-x-16"
-      >
-        <div className="w-full text-center lg:order-2 lg:text-left mb-14">
-          <h2 className="text-2xl font-semibold md:text-3xl lg:text-4xl">
-          Development of custom applications and websites
-          </h2>
+      <div className="w-full text-center mb-12">
+        <h2 className="text-3xl font-semibold md:text-4xl lg:text-5xl mb-6">
+          Professional Certifications
+        </h2>
+        <p className="my-4 text-lightColor max-w-3xl mx-auto">
+          Showcasing my technical expertise and professional achievements through industry-recognized certifications.
+        </p>
+      </div>
 
-          <p className="my-4 text-lightColor">
-          The services I offer as benefits, from traditional development for more flexibility to new
-          code with Webflow for more simplicity/speed through natural referencing (SEO).
-          </p>
-
-          <Link
-            href="#contact"
-            className="mt-8 inline-block rounded-full bg-secondaryColor px-12 py-3 text-sm font-medium text-darkColor
-              transition duration-300 hover:bg-secondaryLight hover:text-lightColor focus:outline-none focus:ring
-              focus:ring-yellow-400 xl:text-base"
-          >
-            Start your project now
-          </Link>
-        </div>
-        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div className="max-w-screen-2xl w-full px-4 md:px-8 lg:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <article
             className="flex flex-col min-h-24 items-center justify-start gap-4 rounded-lg border border-lightColor
               bg-gray-50/[0.04] bg-center px-4 py-6 backdrop-blur-md md:min-h-40"
           >
-            <h3 className="text-xl font-bold  text-center">Website or web application development</h3>
+            <h3 className="text-xl font-bold text-center">IBM Data Science Professional Certificate</h3>
             <p className="text-sm leading-6 text-gray-300 text-center lg:text-left lg:text-base">
-            Development from a given graphic model or that I can create with you to convert it
-            in a web project, I pay particular attention to the
-              <strong>
-                <abbr title="Expérience Utilisateur">UX</abbr>
-              </strong>
-              , optimization and web accessibility. I develop landing pages, blogs, portfolios, showcase sites and
-              applications web (<abbr title="Software as a Service">SaaS</abbr>...) .
+              Demonstrates foundational understanding of AWS Cloud concepts, services, and terminology. 
+              Validated knowledge of AWS Cloud architecture, security, and pricing models.
             </p>
+            <a
+              href="https://www.credly.com/badges/6366a28e-790a-4f83-9825-308fd4b1ed07/public_url"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block rounded-full bg-secondaryColor px-8 py-2 text-sm font-medium text-darkColor
+                transition duration-300 hover:bg-secondaryLight hover:text-lightColor focus:outline-none focus:ring
+                focus:ring-yellow-400"
+            >
+              View Certificate
+            </a>
           </article>
 
           <article
             className="flex flex-col min-h-24 items-center justify-start gap-4 rounded-lg border border-lightColor
               bg-gray-50/[0.04] bg-center px-4 py-6 backdrop-blur-md md:min-h-40"
           >
-            <h3 className="text-xl font-bold text-center">Google SEO</h3>
+            <h3 className="text-xl font-bold text-center">Google Data Analytics Professional Certificate</h3>
             <p className="text-sm leading-6 text-gray-300 text-center lg:text-left lg:text-base">
-            Optimization of your website/web application for natural (organic) SEO on Google and
-            other search engines, the{" "}
-              <strong>
-                <abbr title="Search Engine Optimization">SEO</abbr>
-              </strong>
-              .
+              Verified expertise in cloud concepts, Azure services, Azure workloads, security, privacy, 
+              pricing, and support.
             </p>
+            <a
+              href="https://coursera.org/share/78df71ebb72a9bd8164067f3d98a8dd4"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block rounded-full bg-secondaryColor px-8 py-2 text-sm font-medium text-darkColor
+                transition duration-300 hover:bg-secondaryLight hover:text-lightColor focus:outline-none focus:ring
+                focus:ring-yellow-400"
+            >
+              View Certificate
+            </a>
           </article>
 
           <article
             className="flex flex-col min-h-24 items-center justify-start gap-4 rounded-lg border border-lightColor
               bg-gray-50/[0.04] bg-center px-4 py-6 backdrop-blur-md md:min-h-40"
           >
-            <h3 className="text-xl font-bold text-center">Web Design</h3>
+            <h3 className="text-xl font-bold text-center">CompTIA Security+</h3>
             <p className="text-sm leading-6 text-gray-300 text-center lg:text-left lg:text-base">
-            Creation of your design and branding on Figma, with wireframe phase, mockup or directly
-            on Webflow.
+              Certified in cybersecurity fundamentals, network security, compliance, threats, 
+              and security infrastructure.
             </p>
-          </article>
-
-          <article
-            className="flex flex-col min-h-24 items-center justify-start gap-4 rounded-lg border border-lightColor
-              bg-gray-50/[0.04] bg-center px-4 py-6 backdrop-blur-md md:min-h-40"
-          >
-            <h3 className="text-xl font-bold text-center">Accessibility</h3>
-            <p className="text-sm leading-6 text-gray-300 text-center lg:text-left lg:text-base">
-            Audit and improvement of the<strong>Accessibility</strong>of your website, following the standards
-              <abbr title="Web Content Accessibility Guidelines"> WCAG</abbr>
-            </p>
+            <a
+              href="https://www.credly.com/your-security-plus-badge-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block rounded-full bg-secondaryColor px-8 py-2 text-sm font-medium text-darkColor
+                transition duration-300 hover:bg-secondaryLight hover:text-lightColor focus:outline-none focus:ring
+                focus:ring-yellow-400"
+            >
+              View Certificate
+            </a>
           </article>
         </div>
       </div>

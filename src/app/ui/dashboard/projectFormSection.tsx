@@ -18,7 +18,7 @@ export default function ProjectFormSection({ stacks }: { stacks: Array<Stack> })
         gap-4 bg-[center_top_4rem] bg-no-repeat py-4 pt-8 *:mx-auto md:gap-6"
     >
       <h2 className="text-xl md:text-2xl lg:text-3xl">
-        {projectToModify ? "Modifier le projet" : "Ajouter un projet"}
+        {projectToModify ? "Edit a Project": "Add a Project"}
       </h2>
       {projectToModify && <ResetProjectButton />}
       {projectToModify ? (

@@ -1,46 +1,47 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Bricolage_Grotesque } from "next/font/google";
+import { Inter } from "next/font/google";
 import { Person, WithContext } from "schema-dts";
 import "./globals.css";
 import ogImage from "../../public/opengraph-image.png";
 import twitterImage from "../../public/twitter-image.png";
 import { EdgeStoreProvider } from "@/lib/edgestore";
 import { SanityLive } from "../../sanity/client";
+import Providers from "./providers";
 
 const personStructuredData: WithContext<Person> = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Franck GALLIOD",
-  url: "https://www.franckwebpro.com/",
-  image: "https://www.franckwebpro.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fprprofil.1419460a.png&w=640&q=75",
+  name: "Kalp Senghani",
+  url: "https://www.kalpsenghani.com/",
+  image: "https://www.kalpsenghani.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fprprofil.1419460a.png&w=640&q=75",
   sameAs: [
-    "https://www.linkedin.com/in/franck-galliod/",
-    "https://github.com/FranckWebPro",
+    "https://www.linkedin.com/in/kalp-senghani-899958233/",
+    "https://github.com/kalpsenghani/",
     "https://www.agencenocode.com/",
   ],
-  jobTitle: "Développeur Web Next / Webflow",
+  jobTitle: "Full Stack Developer",
   worksFor: {
     "@type": "Organization",
-    name: "Agence No Code",
+    name: "",
   },
 };
 
-const bG = Bricolage_Grotesque({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfolio Développeur Web Next.js - FranckWebPro",
-  description: "Développeur Web Next.js / et d'applications Webflow, freelance et entrepreneur indépendant",
-  metadataBase: new URL("https://www.franckwebpro.com/"),
+  title: "Kalp Senghani - Full Stack Developer",
+  description: "Full Stack Developer",
+  metadataBase: new URL("https://www.kalpsenghani.com/"),
   keywords: [
-    "Développeur Web",
+    "Full Sstack Developer",
     "Next.js",
     "React",
-    "applications web",
+    "Web Applications",
     "Node.js",
-    "Webflow",
+    "Docker",
     "Freelance",
-    "Entrepreneur",
+    "Developer",
   ],
   alternates: {
     canonical: `/`,
@@ -55,37 +56,37 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://www.franckwebpro.com/",
-    title: "Portfolio développeur web - FranckWebPro",
+    url: "https://www.kalpsenghani.com/",
+    title: "Kalp Senghani - Full Stack Developer",
     description:
-      "Développeur Web Next.js et d'application Webflow, freelance et développeur indépendant, je créé avec passions Saas et autres applications pour la marketplace Webflow",
+      "As a Next.js web and Full Stack application developer, I am a freelance and independent developer, passionate about creating SaaS and other applications.",
     images: [
       {
-        url: `https://www.franckwebpro.com${ogImage.src}`,
+        url: `https://www.kalpsenghani.com${ogImage.src}`,
         width: 800,
         height: 600,
-        alt: "Portfolio de Franck",
+        alt: "Portfolio of Kalp",
       },
     ],
-    siteName: "FranckWebPro",
+    siteName: "kalpsenghani",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@FranckWebPro",
-    title: "Portfolio Développeur Next.js - FranckWebPro",
+    site: "@kalpsenghani",
+    title: "Kalp Senghani - Full Stack Developer",
     description:
-      "Développeur Web Next.js et d'application Webflow, freelance et développeur indépendant, je créé avec passions Saas et autres applications pour la marketplace Webflow",
-    images: `https://www.franckwebpro.com${twitterImage.src}`,
+      "Next.js web and Full Stack application developer, freelance and independent developer, I passionately create Saas and other applications",
+    images: `https://www.kalpsenghani.com${twitterImage.src}`,
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="fr">
+    <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <script
@@ -95,11 +96,13 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${bG.className} bg-darkColor text-lightColor`}>
-        <EdgeStoreProvider>
-          {children}
-          <SanityLive />
-        </EdgeStoreProvider>
+      <body className={`${inter.className} bg-darkColor text-lightColor`}>
+        <Providers>
+          <EdgeStoreProvider>
+            {children}
+            <SanityLive />
+          </EdgeStoreProvider>
+        </Providers>
       </body>
     </html>
   );

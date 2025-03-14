@@ -15,7 +15,7 @@ export default function StackSection({ stacks }: { stacks: Array<Stack> }) {
           lg:items-center lg:gap-x-16"
       >
         <div className="w-full text-center lg:text-left mb-14">
-          <h2 className="text-2xl font-semibold md:text-3xl lg:text-4xl">Les technos du futur que je maîtrise</h2>
+          <h2 className="text-2xl font-semibold md:text-3xl lg:text-4xl">The technologies of the future that I master</h2>
           <p className="my-4 text-lightColor">
           All the languages, libraries and frameworks, code or no code, that I know and that I want to
           offer in my services... I am of course open to new discoveries and learning

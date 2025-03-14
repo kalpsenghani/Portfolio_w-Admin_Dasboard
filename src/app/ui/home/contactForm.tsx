@@ -6,7 +6,7 @@ export default function ContactForm() {
           lg:p-12"
       >
         <div className="flex flex-col gap-3 lg:col-span-2 lg:py-12">
-          <h2 className="mb-6 max-w-80 text-3xl font-bold md:text-4xl">Un projet de fou ? Discutons-en :</h2>
+          <h2 className="mb-6 max-w-80 text-3xl font-bold md:text-4xl">A crazy project? Let's discuss it:</h2>
           <p className="mb-4 max-w-xl text-lg">
           Whether you're a business, a freelance professional, or just curious about web development, don't hesitate to contact me. You can reach me by email or using the form; I'll get back to you as soon as possible!
           </p>
@@ -24,7 +24,7 @@ export default function ContactForm() {
           method="POST"
           className="space-y-4 rounded-lg border-2 bg-glassmorphism p-8 shadow-lg backdrop-blur-md lg:col-span-3 lg:p-12"
         >
-          <input type="hidden" aria-hidden name="access_key" value="280330b4-d8a3-4a40-b1bb-05c086f6cf92"></input>
+          <input type="hidden" aria-hidden name="access_key" value="82927390-3cc2-4ef8-8ce2-2249f91f37cc"></input>
           <div>
             <label className="sr-only" htmlFor="name">
               Name
@@ -47,7 +47,7 @@ export default function ContactForm() {
               <input
                 className="w-full rounded-lg border border-gray-200 bg-transparent p-3 text-sm duration-300
                   hover:border-primaryLight focus:outline-primaryColor"
-                placeholder="Adresse email *"
+                placeholder="E-mail address *"
                 type="email"
                 id="email"
                 name="email"
@@ -62,7 +62,7 @@ export default function ContactForm() {
               <input
                 className="w-full rounded-lg border border-gray-200 bg-transparent p-3 text-sm duration-300
                   hover:border-primaryLight focus:outline-primaryColor"
-                placeholder="Numéro de téléphone"
+                placeholder="Phone number"
                 type="tel"
                 id="phone"
                 name="phone"
@@ -81,7 +81,7 @@ export default function ContactForm() {
             >
               <input className="sr-only" id="conseil" type="radio" tabIndex={-1} name="option" />
 
-              <span className="text-sm"> Conseil </span>
+              <span className="text-sm"> Advice </span>
             </label>
             <label
               htmlFor="dev"
@@ -92,7 +92,7 @@ export default function ContactForm() {
             >
               <input className="sr-only" id="dev" type="radio" tabIndex={-1} name="option" />
 
-              <span className="text-sm"> Web development </span>
+              <span className="text-sm"> App development </span>
             </label>
             <label
               htmlFor="reprise"

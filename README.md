@@ -27,9 +27,9 @@ Here are the key technologies that power my portfolio and projects:
 
 I'd love to connect! Here’s how you can reach me:
 
-- 📧 **Email**: [your-email@example.com](mailto:kalpsenghani0601@gmail.com)
-- 🌐 **LinkedIn**: [Your LinkedIn](https://www.linkedin.com/in/kalp-senghani-899958233/)
-- 🐙 **GitHub**: [Your GitHub](https://github.com/kalpsenghani)
+- 📧 **Email**: [kalpsenghani0601@gmail.com](mailto:kalpsenghani0601@gmail.com)
+- 🌐 **LinkedIn**: [Kalp Senghani](https://www.linkedin.com/in/kalp-senghani-899958233/)
+- 🐙 **GitHub**: [kalpsenghani](https://github.com/kalpsenghani)
 
 Feel free to explore my projects, and don’t hesitate to contact me for collaboration or any inquiries! 😄
 

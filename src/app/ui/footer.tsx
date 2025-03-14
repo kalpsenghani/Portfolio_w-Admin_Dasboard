@@ -4,9 +4,8 @@ import Image from "next/image";
 import { User } from "../../lib/definitions";
 import logoLinkedin from "./images/linkedin.png";
 import logoGithub from "./images/logo-github.png";
-import logoMalt from "./images/malt.webp";
 
-export default function Footer({ user }: { user: User }) {
+export default function Footer({ user = {} }: { user?: Partial<User> }) {
   return (
     <footer className="w-full">
       <div className="relative mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
@@ -60,17 +59,8 @@ export default function Footer({ user }: { user: User }) {
                   className="rounded-lg bg-lightColor p-2 duration-300 hover:opacity-60"
                 />{" "}
               </a>
-              <a href="https://www.malt.fr/profile/franckgalliod?overview" target="_blank" rel="noreferrer">
-                <Image
-                  src={logoMalt}
-                  width={45}
-                  height={45}
-                  alt="logo Malt"
-                  className="duration-300 hover:opacity-60"
-                />{" "}
-              </a>
               <p className="mx-auto mr-6 w-full text-center leading-relaxed lg:text-left dark:text-gray-400">
-                Le développement web au service de votre business
+              Web development at the service of your business
               </p>
             </div>
           </div>
@@ -78,12 +68,12 @@ export default function Footer({ user }: { user: User }) {
           <ul className="mt-6 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-12">
             <li>
               <a className="p-2 transition duration-300 text-lightColor hover:text-primaryLight" href="#services">
-                Services
+                Certifications
               </a>
             </li>
             <li>
               <a className="p-2 transition duration-300 text-lightColor hover:text-primaryLight" href="#experience">
-                Expériences
+                Experiences
               </a>
             </li>
 
@@ -101,13 +91,7 @@ export default function Footer({ user }: { user: User }) {
                 className="p-2 transition duration-300 dark:text-lightColor dark:hover:text-primaryLight"
                 href="#projects"
               >
-                Projets
-              </a>
-            </li>
-
-            <li>
-              <a className="p-2 transition duration-300 dark:text-lightColor dark:hover:text-primaryLight" href="/blog">
-                Blog
+                Projects
               </a>
             </li>
             <li>
@@ -122,7 +106,7 @@ export default function Footer({ user }: { user: User }) {
         </div>
 
         <p className="mt-12 text-center text-sm text-gray-500 lg:text-right dark:text-gray-400">
-          Copyright &copy; 2024. All rights reserved.
+          Copyright &copy; 2025. All rights reserved.
         </p>
       </div>
     </footer>
