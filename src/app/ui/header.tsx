@@ -36,8 +36,8 @@ export default function Header() {
         >
           <span className="sr-only">Home</span>
           {/* Glow effect container */}
-          <div className="absolute inset-0 rounded-full bg-secondaryColor/20 blur-xl scale-150 opacity-0 
-            group-hover:opacity-100 transition-all duration-700 animate-pulse"></div>
+          <div className="absolute inset-0 rounded-full bg-secondaryColor/40 blur-xl scale-150 opacity-0 
+            group-hover:opacity-10 transition-all duration-700 animate-pulse"></div>
           
           {/* Logo image */}
           <div className="relative transform transition-transform duration-300 group-hover:scale-110">
@@ -113,14 +113,16 @@ export default function Header() {
         </ul>
 
         <Link
-          className="z-20 h-auto min-w-[13ch] rounded-full bg-secondaryColor from-green-300 via-blue-500 to-purple-600 px-6
-            py-3 text-center text-sm font-semibold text-darkColor shadow transition duration-200 hover:bg-secondaryLight
-            hover:bg-gradient-to-r hover:text-lightColor xl:text-base"
-          href="/#contact"
+        className="relative z-20 h-auto min-w-[13ch] rounded-full px-6 py-3 text-center text-sm font-semibold 
+          text-lightColor shadow-lg transition-all duration-300 border-2 border-transparent 
+           bg-gradient-to-r from-[#4B0082] via-[#00008B] to-[#4B0082] bg-clip-padding 
+           hover:brightness-125 active:scale-95"
+         href="/#contact"
           onClick={() => navIsOpen && handleMobileMenu()}
-        >
-          Contact Me
+          >
+           Contact Me
         </Link>
+
 
         <button
           onClick={handleMobileMenu}

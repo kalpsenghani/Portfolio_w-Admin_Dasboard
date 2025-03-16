@@ -16,13 +16,14 @@ const config: Config = {
         hero: "url('/bg1.webp')",
         glassmorphism: "url('/bg2.webp')",
         glassmorphism2: "url('/bg3.webp')",
+        'gradient-purple': 'linear-gradient(135deg, #a855f7 0%, #d8b4fe 100%)',
       },
       colors: {
-        primaryColor: "#9037ea",
-        primaryLight: "#cb98ffcc",
-        primaryExtraLight: "#9037ea99",
-        secondaryColor: "#10ddf7",
-        secondaryLight: "rgba(16, 221, 247, 0.7)",
+        primaryColor: "#a855f7",
+        primaryLight: "#d8b4fe",
+        primaryExtraLight: "#a855f780",
+        secondaryColor: "#c084fc",
+        secondaryLight: "rgba(168, 95, 240, 0.7)",
         darkColor: "#0e0e0e",
         lightColor: "#e7e7e7",
       },
@@ -38,8 +39,8 @@ const config: Config = {
           },
         },
         float: {
-          '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
-          '50%': { transform: 'translateY(-20px) rotate(5deg)' },
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
         },
         fadeIn: {
           '0%': { opacity: '0', transform: 'scale(0.95)' },
@@ -47,10 +48,28 @@ const config: Config = {
         },
         glow: {
           '0%': {
-            'box-shadow': '0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--secondaryColor), 0 0 20px var(--secondaryColor)',
+            'box-shadow': '0 0 5px rgba(168, 95, 240, 0.5), 0 0 10px rgba(168, 95, 240, 0.5), 0 0 15px rgba(168, 95, 240, 0.5)',
+          },
+          '50%': {
+            'box-shadow': '0 0 10px rgba(168, 95, 240, 0.7), 0 0 20px rgba(168, 95, 240, 0.7), 0 0 30px rgba(168, 95, 240, 0.7)',
           },
           '100%': {
-            'box-shadow': '0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--secondaryColor), 0 0 40px var(--secondaryColor)',
+            'box-shadow': '0 0 5px rgba(168, 95, 240, 0.5), 0 0 10px rgba(168, 95, 240, 0.5), 0 0 15px rgba(168, 95, 240, 0.5)',
+          },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '200% 0' },
+          '100%': { backgroundPosition: '-200% 0' },
+        },
+        
+        pulseGlow: {
+          '0%, 100%': {
+            opacity: '1',
+            transform: 'scale(1)',
+          },
+          '50%': {
+            opacity: '0.5',
+            transform: 'scale(1.05)',
           },
         },
       },
@@ -59,9 +78,12 @@ const config: Config = {
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'float': 'float 6s ease-in-out infinite',
         'float-slow': 'float 8s ease-in-out infinite',
-        'float-delayed': 'float 7s ease-in-out infinite',
+        'float-delayed': 'float 6s ease-in-out infinite 3s',
         'fadeIn': 'fadeIn 1s ease-in forwards',
-        'glow': 'glow 2s ease-in-out infinite alternate',
+        'glow': 'glow 1.5s ease-in-out infinite',
+        'spin-slow': 'spin 8s linear infinite',
+        'shimmer': 'shimmer 3s linear infinite',
+        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
       },
     },
   },

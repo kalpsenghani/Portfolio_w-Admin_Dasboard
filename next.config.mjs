@@ -62,6 +62,14 @@ const nextConfig = {
   },
   webpack: (config) => {
     config.externals = [...config.externals, "bcrypt"];
+    config.module.rules.push({
+      test: /\.json$/,
+      type: 'json',
+    });
+    config.module.rules.push({
+      test: /\.lottie$/,
+      type: 'json',
+    });
     return config;
   },
 };

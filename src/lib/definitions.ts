@@ -30,7 +30,7 @@ export type Project = {
   link: string | undefined;
   github_repo: string | undefined;
   published: boolean;
-  status: "Terminé" | "En cours de développement";
+  status: "Completed" | "Under development";
 };
 
 export type Stack = {

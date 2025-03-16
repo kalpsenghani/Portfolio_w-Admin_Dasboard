@@ -131,7 +131,7 @@ export default function ContactForm() {
                 text-darkColor duration-300 hover:border-primaryLight hover:bg-transparent hover:text-lightColor
                 sm:w-auto"
             >
-              Send me your sweet words
+              Let Us Connect
             </button>
           </div>
         </form>

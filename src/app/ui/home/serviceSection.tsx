@@ -23,11 +23,17 @@ export default function ServiceSection() {
             className="flex flex-col min-h-24 items-center justify-start gap-4 rounded-lg border border-lightColor
               bg-gray-50/[0.04] bg-center px-4 py-6 backdrop-blur-md md:min-h-40"
           >
-            <h3 className="text-xl font-bold text-center">IBM Data Science Professional Certificate</h3>
+            <h3 className="text-xl font-semibold text-secondaryColor mb-2">IBM Data Science Professional Certificate</h3>
             <p className="text-sm leading-6 text-gray-300 text-center lg:text-left lg:text-base">
-              Demonstrates foundational understanding of AWS Cloud concepts, services, and terminology. 
-              Validated knowledge of AWS Cloud architecture, security, and pricing models.
-            </p>
+    I completed the IBM Data Science Professional Certificate program on Coursera, where I:
+    <ul className="list-disc pl-5 space-y-1">
+        <li>Mastered data science methodologies, tools, and Python for AI and data science.</li>
+        <li>Developed expertise in SQL database management, data visualization, and data analysis using various tools.</li>
+        <li>Applied machine learning techniques to build predictive models and completed a great capstone project.</li>
+    </ul>
+    This program has equipped me with the technical skills to effectively analyze complex data and build data-driven solutions.
+</p>
+
             <a
               href="https://www.credly.com/badges/6366a28e-790a-4f83-9825-308fd4b1ed07/public_url"
               target="_blank"
@@ -44,11 +50,17 @@ export default function ServiceSection() {
             className="flex flex-col min-h-24 items-center justify-start gap-4 rounded-lg border border-lightColor
               bg-gray-50/[0.04] bg-center px-4 py-6 backdrop-blur-md md:min-h-40"
           >
-            <h3 className="text-xl font-bold text-center">Google Data Analytics Professional Certificate</h3>
+            <h3 className="text-xl font-semibold text-secondaryColor mb-2">Google Data Analytics Certificate</h3>
             <p className="text-sm leading-6 text-gray-300 text-center lg:text-left lg:text-base">
-              Verified expertise in cloud concepts, Azure services, Azure workloads, security, privacy, 
-              pricing, and support.
-            </p>
+    I completed the Google Data Analytics Certificate, where I:
+    <ul className="list-disc pl-5 space-y-1">
+        <li>Gained an immersive understanding of data analysis practices and processes used by data analysts.</li>
+        <li>Developed skills in data cleaning, analysis, and visualization using tools like spreadsheets, SQL, R, and Tableau.</li>
+        <li>Mastered data cleaning, analysis, and visualization to deliver actionable insights through dashboards and reports.</li>
+    </ul>
+    It has strengthened my ability to clean, analyze, and visualize complex data, preparing me to provide data-driven insights in a professional setting.
+</p>
+
             <a
               href="https://coursera.org/share/78df71ebb72a9bd8164067f3d98a8dd4"
               target="_blank"
@@ -65,13 +77,19 @@ export default function ServiceSection() {
             className="flex flex-col min-h-24 items-center justify-start gap-4 rounded-lg border border-lightColor
               bg-gray-50/[0.04] bg-center px-4 py-6 backdrop-blur-md md:min-h-40"
           >
-            <h3 className="text-xl font-bold text-center">CompTIA Security+</h3>
+            <h3 className="text-xl font-semibold text-secondaryColor mb-2">Full Stack Development</h3>
             <p className="text-sm leading-6 text-gray-300 text-center lg:text-left lg:text-base">
-              Certified in cybersecurity fundamentals, network security, compliance, threats, 
-              and security infrastructure.
-            </p>
+    I completed a Frontend Development Certificate, where I:
+    <ul className="list-disc pl-5 space-y-1">
+        <li>Mastered front-end technologies like HTML, CSS, JavaScript, and React.js to build dynamic, user-friendly web applications.</li>
+        <li>Developed responsive and accessible websites, ensuring seamless user experiences across devices and platforms.</li>
+        <li>Utilized modern web frameworks and libraries to enhance application performance and maintainability.</li>
+    </ul>
+    This certification has equipped me with the essential skills to create interactive and visually appealing front-end solutions.
+</p>
+
             <a
-              href="https://www.credly.com/your-security-plus-badge-link"
+              href="/certi.jpg"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-block rounded-full bg-secondaryColor px-8 py-2 text-sm font-medium text-darkColor
