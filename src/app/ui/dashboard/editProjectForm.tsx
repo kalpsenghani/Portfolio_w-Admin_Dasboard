@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function EditProjectForm({ stacks, edgestore }: { stacks: Array<Stack>; edgestore: MyEdgeStoreRouter }) {
   const { projectToModify, setProjectToModify } = useContext(ProjectContext);
-  const [status, setStatus] = useState(projectToModify!.status);
+  const [status, setStatus] = useState<"Terminé" | "En cours de développement">(projectToModify!.status as "Terminé" | "En cours de développement");
   const [currentPreviewImg, setCurrentPreviewImg] = useState(projectToModify!.preview_picture_url);
 
   const handleEditProject = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -40,7 +40,7 @@ export default function EditProjectForm({ stacks, edgestore }: { stacks: Array<S
   };
 
   useEffect(() => {
-    setStatus(projectToModify!.status);
+    setStatus(projectToModify!.status as "Terminé" | "En cours de développement");
     setCurrentPreviewImg(projectToModify!.preview_picture_url);
   }, [projectToModify]);
 
