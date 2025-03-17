@@ -1,11 +1,9 @@
 import React from "react";
 import logo from "./images/logoLight.png";
 import Image from "next/image";
-import { User } from "../../lib/definitions";
-import logoLinkedin from "./images/linkedin.png";
-import logoGithub from "./images/logo-github.png";
 
-export default function Footer({ user = {} }: { user?: Partial<User> }) {
+
+export default function Footer() {
   return (
     <footer className="w-full">
       <div className="relative mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-24 lg:pt-24">

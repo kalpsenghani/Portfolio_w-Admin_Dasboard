@@ -76,7 +76,7 @@ export default function ExperienceSection() {
               {/* LeetCode Profile */}
               <div className="group rounded-lg border border-lightColor bg-gray-50/[0.04] p-6 backdrop-blur-md 
                 transition-all duration-300 hover:border-primaryColor">
-                <Link href="https://leetcode.com/your-profile" target="_blank" rel="noopener noreferrer"
+                <Link href="https://leetcode.com/u/kalpsenghani/" target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-4">
                   <div className="rounded-lg bg-[#FFA116] p-4">
                     <svg className="h-6 w-6 text-white" viewBox="0 0 24 24" fill="currentColor">
@@ -94,7 +94,7 @@ export default function ExperienceSection() {
               {/* HackerRank Profile */}
               <div className="group rounded-lg border border-lightColor bg-gray-50/[0.04] p-6 backdrop-blur-md 
                 transition-all duration-300 hover:border-primaryColor">
-                <Link href="https://www.hackerrank.com/your-profile" target="_blank" rel="noopener noreferrer"
+                <Link href="https://www.hackerrank.com/profile/kalpsenghani0601" target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-4">
                   <div className="rounded-lg bg-[#2EC866] p-4">
                     <svg className="h-6 w-6 text-white" viewBox="0 0 24 24" fill="currentColor">

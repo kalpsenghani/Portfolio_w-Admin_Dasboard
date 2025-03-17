@@ -1,14 +1,26 @@
 "use client";
 
-import React, { Suspense, useState } from "react";
-import Link from "next/link";
+import React, { Suspense } from "react";
 import { TypeAnimation } from 'react-type-animation';
 import dynamic from 'next/dynamic';
 import Image from "next/image";
-import { User } from "@/lib/definitions";
-import logoLinkedin from "../images/linkedin.png";
-import logoGithub from "../images/logo-github.png";
 import profilPicture from "../images/prprofil.png";
+
+type LottieAnimationData = {
+  v: string;
+  fr: number;
+  ip: number;
+  op: number;
+  w: number;
+  h: number;
+  nm: string;
+  ddd: number;
+  assets: unknown[];
+  layers: unknown[];
+  meta?: {
+    g: string;
+  };
+};
 
 // Dynamically import Lottie component with SSR disabled
 const Lottie = dynamic(() => import('lottie-react'), {
@@ -18,8 +30,7 @@ const Lottie = dynamic(() => import('lottie-react'), {
 
 // Import animation data as a dynamic import
 const AnimationWrapper = () => {
-  const [animationData, setAnimationData] = React.useState<any>(null);
-
+  const [animationData, setAnimationData] = React.useState<LottieAnimationData | null>(null);
   React.useEffect(() => {
     import('@/components/lottiefiles/animation.json')
       .then((data) => setAnimationData(data.default));
@@ -38,29 +49,8 @@ const AnimationWrapper = () => {
   );
 };
 
-export default function HeroSection({ user = {} }: { user?: Partial<User> }) {
-  const [navIsOpen, setNavIsOpen] = useState(false);
-  const handleMobileMenu = () => {
-    setNavIsOpen(!navIsOpen);
-    if (typeof window != "undefined" && !navIsOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-  };
+export default function HeroSection() {
 
-  const scrollToSection = (sectionId: string, event: React.MouseEvent) => {
-    event.preventDefault();
-    const element = document.getElementById(sectionId);
-    console.log('Scrolling to:', sectionId, 'Element found:', element); // Debug log
-    
-    if (element) {
-      window.scrollTo({
-        top: element.offsetTop - 100, // Adjust 100 based on your navbar height
-        behavior: 'smooth'
-      });
-    }
-  };
 
   return (
     <>
