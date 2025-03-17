@@ -94,29 +94,30 @@ export default function Header() {
             <Link
               className="p-2 text-lightColor transition hover:text-secondaryColor active:text-secondaryLight
                 dark:text-lightColor dark:hover:text-primaryLight"
+              href="/#capstone"
+              onClick={() => navIsOpen && handleMobileMenu()}
+            >
+              Capstone
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              className="p-2 text-lightColor transition hover:text-secondaryColor active:text-secondaryLight
+                dark:text-lightColor dark:hover:text-primaryLight"
               href="/#projects"
               onClick={() => navIsOpen && handleMobileMenu()}
             >
               Projects
             </Link>
           </li>
-          <li>
-            <Link
-              className="p-2 text-lightColor transition hover:text-secondaryColor active:text-secondaryLight
-                dark:text-lightColor dark:hover:text-primaryLight"
-              href="/blog"
-              onClick={() => navIsOpen && handleMobileMenu()}
-            >
-              Experience
-            </Link>
-          </li>
         </ul>
 
         <Link
         className="relative z-20 h-auto min-w-[13ch] rounded-full px-6 py-3 text-center text-sm font-semibold 
-          text-lightColor shadow-lg transition-all duration-300 border-2 border-transparent 
-           bg-gradient-to-r from-[#4B0082] via-[#00008B] to-[#4B0082] bg-clip-padding 
-           hover:brightness-125 active:scale-95"
+          text-lightColor shadow-lg transition-all duration-300 border-2 border-secondaryColor 
+          bg-gradient-to-r from-purple-700 via-indigo-800 to-blue-900
+          hover:bg-gradient-to-l hover:shadow-[0_0_20px_rgba(139,92,246,0.3)] active:scale-95"
          href="/#contact"
           onClick={() => navIsOpen && handleMobileMenu()}
           >

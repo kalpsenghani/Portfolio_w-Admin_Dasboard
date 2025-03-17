@@ -9,7 +9,6 @@ import { User } from "@/lib/definitions";
 import logoLinkedin from "../images/linkedin.png";
 import logoGithub from "../images/logo-github.png";
 import profilPicture from "../images/prprofil.png";
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 // Dynamically import Lottie component with SSR disabled
 const Lottie = dynamic(() => import('lottie-react'), {
@@ -49,6 +48,20 @@ export default function HeroSection({ user = {} }: { user?: Partial<User> }) {
       document.body.style.overflow = "unset";
     }
   };
+
+  const scrollToSection = (sectionId: string, event: React.MouseEvent) => {
+    event.preventDefault();
+    const element = document.getElementById(sectionId);
+    console.log('Scrolling to:', sectionId, 'Element found:', element); // Debug log
+    
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 100, // Adjust 100 based on your navbar height
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <>
       <section
@@ -62,19 +75,19 @@ export default function HeroSection({ user = {} }: { user?: Partial<User> }) {
           <div className="animate-float absolute bottom-40 right-32 h-8 w-8 border border-purple-500/30 rotate-45"></div>
         </div>
 
-        <div className="mx-auto max-w-7xl">
-          <div className="grid min-h-[calc(100vh-8rem)] grid-cols-1 items-center gap-12 lg:grid-cols-2">
+        <div className="mx-auto max-w-7xl h-screen flex items-center">
+          <div className="grid min-h-[calc(100vh-16rem)] grid-cols-1 items-center gap-12 lg:grid-cols-2">
             {/* Left Content */}
-            <div className="flex flex-col items-start space-y-8 pt-8 md:pt-0">
+            <div className="flex flex-col items-start space-y-8 pt-8 md:pt-0 pl-4 md:pl-8 lg:pl-12">
               <div className="space-y-4">
-              <h2 className="text-5xl font-bold text-lightColor font-[YourDesiredFont]">
+              <h2 className="text-5xl font-bold text-lightColor font-[YourDesiredFont] ml-1">
                 I'm
               </h2>
               <h1 className="bg-gradient-to-r from-purple-700 via-indigo-800 to-blue-900 bg-clip-text text-6xl 
-                font-bold text-transparent font-[YourDesiredFont]">
+                font-bold text-transparent font-[YourDesiredFont] ml-1">
                 Kalp
               </h1>
-              <h2 className="text-5xl font-bold text-lightColor font-[YourDesiredFont]">
+              <h2 className="text-5xl font-bold text-lightColor font-[YourDesiredFont] ml-1">
                 Senghani
               </h2>
 
@@ -82,48 +95,18 @@ export default function HeroSection({ user = {} }: { user?: Partial<User> }) {
                   <p className="text-2xl ml-1">A Passionate</p>
                   <TypeAnimation
                     sequence={[
-                      'BACKEND DEVELOPER',
+                      'BACKEND DEVELOPER       ',
                       2000,
-                      'DevOps ENGINEER',
+                      'DevOps ENGINEER       ',
                       2000,
                     ]}
                     wrapper="span"
                     speed={50}
                     repeat={Infinity}
-                    className="text-2xl font-bold text-secondaryColor"
+                    className="text-2xl font-bold text-secondaryColor whitespace-pre"
                   />
                 </div>
               </div>
-              
-
-              {/* Social Links */}
-              <div className="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-4">
-  {/* LinkedIn Link */}
-  <a
-    href="https://www.linkedin.com/in/kalp-senghani-899958233/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="duration-300 hover:text-purple-600"
-  >
-    <FaLinkedin
-      size={45}
-      className="text-purple-500 hover:text-purple-600 transition-all duration-300"
-    />
-  </a>
-
-  {/* GitHub Link */}
-  <a
-    href={user.github_link} // Assuming user.github_link is properly passed
-    target="_blank"
-    rel="noopener noreferrer"
-    className="duration-300 hover:text-purple-600"
-  >
-    <FaGithub
-      size={45}
-      className="text-purple-500 hover:text-purple-600 transition-all duration-300"
-    />
-  </a>
-</div>
 
 
               {/* Buttons */}
@@ -148,15 +131,18 @@ export default function HeroSection({ user = {} }: { user?: Partial<User> }) {
                   </a>
                 </div>
 
-                <a
-                  className="inline-flex items-center rounded-full border-2 border-secondaryColor px-8 py-3 
-                    text-base font-medium text-lightColor hover:bg-secondaryColor hover:text-darkColor 
-                    transition-all duration-300"
-                    href="/#projects"
-                    onClick={() => navIsOpen && handleMobileMenu()}
-                >
-                  See My Work
-                </a>
+                <div className="group relative">
+                  <a
+                    href="#projects"
+                    className="inline-flex items-center rounded-full border-2 border-secondaryColor px-8 py-3 
+                      text-base font-medium text-lightColor hover:bg-secondaryColor hover:text-darkColor 
+                      transition-all duration-300"
+                  >
+                    <span className="flex items-center space-x-2">
+                      <span>See My Work</span>
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -173,76 +159,113 @@ export default function HeroSection({ user = {} }: { user?: Partial<User> }) {
       </section>
 
       {/* About Me Section */}
-<section id="about" className="relative py-20 bg-darkColor">
+<section id="about" className="relative py-16 bg-darkColor">
   <div className="container mx-auto px-4">
-    <div className="flex flex-wrap items-center">
-      <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
-        <div className="relative inline-flex items-center justify-center w-full min-w-[200px]">
+    <div className="flex flex-wrap items-start">
+      <div className="w-full md:w-4/12 px-4">
+        <div className="relative flex items-center justify-center h-full min-w-[220px] mt-12 md:mt-16">
+          <div 
+            className="absolute w-[220px] h-[220px] rounded-full 
+            bg-gradient-to-r from-purple-700/70 to-blue-700/70 
+            blur-xl"
+            style={{
+              transform: 'scale(1.15)',
+            }}
+          ></div>
           <Image
             src={profilPicture}
             alt="Kalp Senghani"
-            width={300}
-            height={300}
-            className="relative rounded-full border-4 border-secondaryColor"
+            width={220}
+            height={220}
+            className="relative rounded-full border-4 border-secondaryColor z-10 hover:scale-105 transition-transform duration-300"
           />
         </div>
       </div>
 
-      <div className="w-full md:w-6/12 px-4 mr-auto ml-auto">
+      <div className="w-full md:w-8/12 px-4">
         <div className="md:pr-12">
-          <h3 className="text-3xl font-semibold text-secondaryColor mb-2">
-            About Me
-          </h3>
+          <div className="flex justify-between items-start mb-6">
+            <h3 className="text-3xl font-semibold text-secondaryColor">
+              About Me
+            </h3>
+            {/* Quote Section */}
+            <div className="pl-4 border-l-2 border-purple-500 ml-4">
+              <p className="text-base italic text-gray-300">
+                "The only way to do great work is to love what you do."
+              </p>
+              <p className="text-xs text-gray-400 mt-1">– Steve Jobs</p>
+            </div>
+          </div>
+
           {/* Glowing Text for "Turning Ideas into Scalable Applications" */}
-          <div className="flex items-center space-x-2 pt-4">
-            <p className="text-2xl ml-1">Turning Ideas into</p>
-            <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 animate-pulse">
+          <div className="flex items-center space-x-2 mb-4">
+            <p className="text-xl">Turning Ideas into</p>
+            <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 animate-pulse">
               Scalable Applications
             </span>
           </div>
-          <h4 className="text-xl font-bold text-lightColor mb-4">
+          <h4 className="text-lg font-bold text-lightColor mb-4">
             Full Stack Developer & DevOps Engineer
           </h4>
-          <p className="text-lg leading-relaxed text-gray-300">
-            As a Full Stack Developer and DevOps enthusiast, I bring a unique blend of development
-            and operational expertise to every project. With a strong foundation in both frontend
-            and backend technologies, I specialize in creating efficient, scalable solutions that
-            deliver exceptional user experiences.
-          </p>
-          <ul className="list-none mt-6">
-            <li className="py-2">
+          <div className="space-y-4">
+            <p className="text-base leading-relaxed text-gray-300">
+              As a Full Stack Developer, I thrive on transforming complex problems into elegant, efficient, and user-centric solutions. 
+              My journey began with a passion for understanding how technology works, evolving into a drive to build scalable applications 
+              that enhance digital experiences. I believe development is more than just writing code—it's about innovation, collaboration, 
+              and continuous learning.
+            </p>
+            <p className="text-base leading-relaxed text-gray-300">
+              With expertise in both frontend and backend technologies, I am committed to creating seamless, high-performance systems 
+              while staying at the forefront of emerging trends. My goal is to contribute to impactful projects, mentor aspiring developers, 
+              and continuously refine my craft in the ever-evolving tech landscape.
+            </p>
+          </div>
+          <ul className="list-none mt-6 grid grid-cols-1 md:grid-cols-2 gap-2">
+            <li className="py-1">
               <div className="flex items-center">
-                <div className="bg-secondaryColor rounded-full p-1 mr-3">
-                  <svg className="w-4 h-4 text-darkColor" viewBox="0 0 20 20" fill="currentColor">
+                <div className="bg-secondaryColor rounded-full p-1 mr-2">
+                  <svg className="w-3 h-3 text-darkColor" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <div className="text-gray-300">
-                  Expertise in modern web technologies and frameworks
+                <div className="text-sm text-gray-300">
+                  Expertise in modern web technologies
                 </div>
               </div>
             </li>
-            <li className="py-2">
+            <li className="py-1">
               <div className="flex items-center">
-                <div className="bg-secondaryColor rounded-full p-1 mr-3">
-                  <svg className="w-4 h-4 text-darkColor" viewBox="0 0 20 20" fill="currentColor">
+                <div className="bg-secondaryColor rounded-full p-1 mr-2">
+                  <svg className="w-3 h-3 text-darkColor" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <div className="text-gray-300">
-                  Strong background in DevOps practices and tools
+                <div className="text-sm text-gray-300">
+                  Strong DevOps background
                 </div>
               </div>
             </li>
-            <li className="py-2">
+            <li className="py-1">
               <div className="flex items-center">
-                <div className="bg-secondaryColor rounded-full p-1 mr-3">
-                  <svg className="w-4 h-4 text-darkColor" viewBox="0 0 20 20" fill="currentColor">
+                <div className="bg-secondaryColor rounded-full p-1 mr-2">
+                  <svg className="w-3 h-3 text-darkColor" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <div className="text-gray-300">
-                  Passionate about creating efficient, scalable solutions
+                <div className="text-sm text-gray-300">
+                  Efficient, scalable solutions
+                </div>
+              </div>
+            </li>
+            <li className="py-1">
+              <div className="flex items-center">
+                <div className="bg-secondaryColor rounded-full p-1 mr-2">
+                  <svg className="w-3 h-3 text-darkColor" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div className="text-sm text-gray-300">
+                  End-to-end development expertise
                 </div>
               </div>
             </li>

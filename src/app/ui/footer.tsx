@@ -8,7 +8,7 @@ import logoGithub from "./images/logo-github.png";
 export default function Footer({ user = {} }: { user?: Partial<User> }) {
   return (
     <footer className="w-full">
-      <div className="relative mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
+      <div className="relative mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-24 lg:pt-24">
         <div className="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
           <a
             className="inline-block rounded-full bg-secondaryColor p-2 text-darkColor shadow transition duration-300
@@ -30,7 +30,7 @@ export default function Footer({ user = {} }: { user?: Partial<User> }) {
 
         <div className="lg:flex lg:items-end lg:justify-between">
           <div>
-            <div className="flex justify-center lg:justify-start">
+            <div className="flex justify-center lg:justify-start lg:ml-8">
               <Image
                 src={logo}
                 alt="logo FranckWebPro"
@@ -40,55 +40,43 @@ export default function Footer({ user = {} }: { user?: Partial<User> }) {
                 sizes="(max-width: 768px) 4rem, (max-width: 1200px) 5rem, 6rem"
               />
             </div>
-            <div className="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-4">
-              <a href={user.linkedin_link} target="_blank" rel="noreferrer">
-                <Image
-                  src={logoLinkedin}
-                  width={45}
-                  height={45}
-                  alt="logo Linkedin"
-                  className="duration-300 hover:opacity-60"
-                />{" "}
-              </a>
-              <a href={user.github_link} target="_blank" rel="noreferrer">
-                <Image
-                  src={logoGithub}
-                  width={45}
-                  height={45}
-                  alt="logo github"
-                  className="rounded-lg bg-lightColor p-2 duration-300 hover:opacity-60"
-                />{" "}
-              </a>
-              <p className="mx-auto mr-6 w-full text-center leading-relaxed lg:text-left dark:text-gray-400">
-              Web development at the service of your business
+            <div className="mt-6 flex flex-wrap items-center justify-center lg:justify-start lg:ml-8">
+              <p className="text-center leading-relaxed lg:text-left dark:text-gray-400">
+                Web development at the service of your business
               </p>
             </div>
           </div>
 
-          <ul className="mt-6 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-12">
+          <ul className="mt-8 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-10 lg:pr-8">
             <li>
-              <a className="p-2 transition duration-300 text-lightColor hover:text-primaryLight" href="#services">
+              <a className="p-1.5 text-sm transition duration-300 text-lightColor/80 hover:text-primaryLight" href="#services">
                 Certifications
               </a>
             </li>
             <li>
-              <a className="p-2 transition duration-300 text-lightColor hover:text-primaryLight" href="#experience">
-                Experiences
+              <a className="p-1.5 text-sm transition duration-300 text-lightColor/80 hover:text-primaryLight" href="#experience">
+                Education
               </a>
             </li>
-
             <li>
               <a
-                className="p-2 transition duration-300 dark:text-lightColor dark:hover:text-primaryLight"
+                className="p-1.5 text-sm transition duration-300 text-lightColor/80 hover:text-primaryLight"
                 href="#technos"
               >
-                Technos
+                Stack
               </a>
             </li>
-
             <li>
               <a
-                className="p-2 transition duration-300 dark:text-lightColor dark:hover:text-primaryLight"
+                className="p-1.5 text-sm transition duration-300 text-lightColor/80 hover:text-primaryLight"
+                href="#capstone"
+              >
+                Capstone
+              </a>
+            </li>
+            <li>
+              <a
+                className="p-1.5 text-sm transition duration-300 text-lightColor/80 hover:text-primaryLight"
                 href="#projects"
               >
                 Projects
@@ -96,7 +84,7 @@ export default function Footer({ user = {} }: { user?: Partial<User> }) {
             </li>
             <li>
               <a
-                className="p-2 transition duration-300 dark:text-lightColor dark:hover:text-primaryLight"
+                className="p-1.5 text-sm transition duration-300 text-lightColor/80 hover:text-primaryLight"
                 href="/dashboard"
               >
                 Dashboard
@@ -105,7 +93,7 @@ export default function Footer({ user = {} }: { user?: Partial<User> }) {
           </ul>
         </div>
 
-        <p className="mt-12 text-center text-sm text-gray-500 lg:text-right dark:text-gray-400">
+        <p className="mt-12 text-center text-sm text-gray-500 lg:text-right lg:pr-8 dark:text-gray-400">
           Copyright &copy; 2025. All rights reserved.
         </p>
       </div>

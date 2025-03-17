@@ -9,6 +9,8 @@ import ContactForm from "./ui/home/contactForm";
 import Footer from "./ui/footer";
 import { browseProjectsWithStacks, fetchStacks, fetchUser } from "../lib/data";
 import ServiceSection from "./ui/home/serviceSection";
+import CapstoneSection from '@/app/ui/home/capstoneSection';
+import SocialBar from './ui/socialBar';
 
 export default async function Home() {
   const projects: Array<ProjectWithStacks> = await browseProjectsWithStacks();
@@ -18,11 +20,13 @@ export default async function Home() {
   return (
     <>
       <Header />
-      <main className="w-full bg-darkColor text-lightColor">
+      <SocialBar />
+      <main className="w-full bg-darkColor text-lightColor lg:pl-24">
         <HeroSection />
         <ServiceSection />
         <ExperienceSection />
         <StackSection stacks={stacks} />
+        <CapstoneSection />
         <ProjectSection projects={projects} />
         <ContactForm />
       </main>

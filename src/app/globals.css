@@ -3,9 +3,27 @@
 @tailwind utilities;
 
 :root {
+  --background: #0a0a0a;
+  --text: #ffffff;
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+}
+
+:root.light-theme {
+  --background: #ffffff;
+  --text: #0a0a0a;
+}
+
+:root.dark-theme {
+  --background: #0a0a0a;
+  --text: #ffffff;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -91,4 +109,19 @@ footer {
   footer {
     padding: 0 3rem;
   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
 }

@@ -69,7 +69,7 @@ export default function EditProjectForm({ stacks, edgestore }: { stacks: Array<S
           </label>
           <input
             className="w-full rounded-lg border border-gray-200 bg-transparent p-3 text-sm"
-            placeholder="Nom du client"
+            placeholder="Name of client"
             type="text"
             id="client_name"
             name="client_name"

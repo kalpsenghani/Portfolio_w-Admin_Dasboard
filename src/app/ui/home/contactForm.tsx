@@ -32,7 +32,7 @@ export default function ContactForm() {
             <input
               className="w-full rounded-lg border border-gray-200 bg-transparent p-3 text-sm duration-300
                 hover:border-primaryLight focus:outline-primaryColor"
-              placeholder="Nom *"
+              placeholder="Name *"
               type="text"
               id="name"
               name="name"
