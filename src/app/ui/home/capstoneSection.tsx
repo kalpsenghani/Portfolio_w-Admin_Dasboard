@@ -25,7 +25,7 @@ export default function CapstoneSection() {
           <div className="lg:w-1/3">
             <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-white/10">
               <Image
-                src="/project-image.jpg" // Add your project image
+                src="/eventraze.jpeg" // Add your project image
                 alt="Capstone Project Preview"
                 width={600}
                 height={400}
