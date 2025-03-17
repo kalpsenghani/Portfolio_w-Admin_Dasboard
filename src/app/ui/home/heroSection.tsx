@@ -18,7 +18,7 @@ const Lottie = dynamic(() => import('lottie-react'), {
 
 // Import animation data as a dynamic import
 const AnimationWrapper = () => {
-  const [animationData, setAnimationData] = React.useState(null);
+  const [animationData, setAnimationData] = React.useState<any>(null);
 
   React.useEffect(() => {
     import('@/components/lottiefiles/animation.json')
