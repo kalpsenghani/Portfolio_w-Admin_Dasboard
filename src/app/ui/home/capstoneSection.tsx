@@ -56,9 +56,9 @@ export default function CapstoneSection() {
                 {[
                   { id: 'summary', label: 'Project Summary' },
                   { id: 'vision', label: 'Project Vision' },
-                  { id: 'requirements', label: 'Requirements' },
+                  { id: 'requirements', label: 'Tech Requirements' },
                   { id: 'plan', label: 'Project Plan' },
-                  { id: 'analysis', label: 'Analysis & Design' },
+                  { id: 'analysis', label: 'Requirement Analysis' },
                   { id: 'wireframes', label: 'Wireframes' },
                   { id: 'status', label: 'Status' },
                   { id: 'implementation', label: 'Implementation' },
@@ -83,7 +83,7 @@ export default function CapstoneSection() {
                     <div className="flex justify-between items-start mb-6">
                       <h3 className="text-2xl font-bold text-white">Project Summary</h3>
                       <a 
-                        href="/docs/project-summary.pdf" 
+                        href="/docs/ProjectSummary.pdf" 
                         target="_blank"
                         className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg hover:opacity-90 transition-all text-sm font-medium text-white group"
                       >
@@ -94,7 +94,17 @@ export default function CapstoneSection() {
                       </a>
                     </div>
                     <p className="text-gray-300">
-                      [Your project summary content]
+                    EventRaze is a web-based event management system designed to centralize and streamline event-related data within an organization. The platform enables seamless event creation, user registration, secure ticketing, and feedback collection.
+
+                    Built using PHP and MySQL, EventRaze provides a robust backend for managing events. The frontend, developed with HTML, JavaScript, jQuery, and AJAX, delivers an interactive user experience.
+
+                    <ul className="list-disc pl-5 space-y-1" >
+                      <b>Key Features:</b>
+                      <li>Automated Event Management – Simplifies event scheduling and organization.</li>
+                      <li>Secure User Authentication – Ensures data privacy and role-based access.</li>
+                      <li>Seamless Ticket Booking – Easy ticket booking to improve event planning.</li>
+                      As a Backend Developer, I contributed to designing server-side logic, implementing authentication, and ensuring database efficiency.
+                    </ul>
                     </p>
                   </div>
                 )}
@@ -104,7 +114,7 @@ export default function CapstoneSection() {
                     <div className="flex justify-between items-start mb-6">
                       <h3 className="text-2xl font-bold text-white">Project Vision</h3>
                       <a 
-                        href="/docs/project-vision.pdf" 
+                        href="/docs/ProjectVision.pdf" 
                         target="_blank"
                         className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg hover:opacity-90 transition-all text-sm font-medium text-white group"
                       >
@@ -115,7 +125,7 @@ export default function CapstoneSection() {
                       </a>
                     </div>
                     <p className="text-gray-300">
-                      [Your project vision content]
+                    The vision of EventRaze is to provide a seamless, automated, and user-friendly platform for event organizers and attendees alike. The system is designed to simplify the event management process by offering efficient scheduling tools, secure ticketing, and real-time analytics. By providing a central hub for event data, EventRaze ensures smooth interactions for all stakeholders. Event organizers can easily manage attendee data, while participants enjoy a simple process for discovering events, registering, and purchasing tickets, all with enhanced user experience and security.
                     </p>
                   </div>
                 )}
@@ -123,9 +133,9 @@ export default function CapstoneSection() {
                 {activeTab === 'requirements' && (
                   <div className="space-y-4 animate-fadeIn">
                     <div className="flex justify-between items-start mb-6">
-                      <h3 className="text-2xl font-bold text-white">Requirements</h3>
+                      <h3 className="text-2xl font-bold text-white">Tech Requirements</h3>
                       <a 
-                        href="/docs/requirements.pdf" 
+                        href="/docs/TechRequirements.pdf" 
                         target="_blank"
                         className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg hover:opacity-90 transition-all text-sm font-medium text-white group"
                       >
@@ -136,7 +146,12 @@ export default function CapstoneSection() {
                       </a>
                     </div>
                     <p className="text-gray-300">
-                      [Your requirements content]
+                    The development of EventRaze has specific technical requirements for both the backend and frontend:
+
+<li>Backend: The server-side of the application is built using PHP (5.6/7.x), a widely used scripting language for web development. The backend logic handles event creation, user management, and ticketing.</li>
+<li>Frontend: The frontend is developed using HTML for structure, JavaScript for interactivity, jQuery for DOM manipulation, and AJAX for asynchronous data requests. These technologies enable a dynamic and responsive user interface.</li>
+<li>Environment: EventRaze can run on various local server environments, including XAMPP, WAMP, MAMP, and LAMP. These server stacks are used to host the PHP backend and MySQL database locally.</li>
+<li>Supported Browsers: The system is compatible with major web browsers, including Chrome, Firefox, Edge, and Opera, ensuring wide accessibility for users.</li>
                     </p>
                   </div>
                 )}
@@ -157,7 +172,13 @@ export default function CapstoneSection() {
                       </a>
                     </div>
                     <p className="text-gray-300">
-                      [Your project plan content]
+                    The development of EventRaze follows an agile methodology, which enables iterative progress and flexibility. The project is divided into several phases:
+
+<li>Requirements Gathering: The team works closely with stakeholders to identify the core features and requirements for the event management system.</li>
+<li>System Design: The architecture and technical design of the system are planned, focusing on scalability, security, and usability.</li>
+<li>Development: This phase involves coding the backend and frontend functionalities, including event management, registration, and ticketing.</li>
+<li>Testing: Testing is conducted to ensure the system works as expected across all browsers and server.</li>
+<li>Deployment: After testing, the system is deployed on local servers for initial use, with plans for future migration to cloud hosting.</li>
                     </p>
                   </div>
                 )}
@@ -165,20 +186,27 @@ export default function CapstoneSection() {
                 {activeTab === 'analysis' && (
                   <div className="space-y-4 animate-fadeIn">
                     <div className="flex justify-between items-start mb-6">
-                      <h3 className="text-2xl font-bold text-white">Analysis & Design</h3>
+                      <h3 className="text-2xl font-bold text-white">Requirement Analysis</h3>
                       <a 
-                        href="/docs/analysis-design.pdf" 
+                        href="/docs/HighLevelRequirements.pdf" 
                         target="_blank"
                         className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg hover:opacity-90 transition-all text-sm font-medium text-white group"
                       >
                         <svg className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                         </svg>
-                        View Document
+                        View document
                       </a>
                     </div>
                     <p className="text-gray-300">
-                      [Your analysis content]
+                    The Requirement Analysis phase involves gathering and analyzing all necessary details about the project to ensure a clear understanding of the system's needs. The system's functionality is broken down into modules, including event creation, user registration, and ticketing. Following key aspects considered during analysis:
+
+    <li><strong>User Requirements:</strong> The system must be intuitive and easy to use for both event organizers and attendees.</li>
+    <li><strong>Functional Requirements:</strong> Includes features like event creation, registration, ticketing, real-time updates, and feedback management.</li>
+    <li><strong>Non-Functional Requirements:</strong> The system should support a scalable architecture, with high availability and security for sensitive data such as user information and ticketing details.</li>
+    <li><strong>Performance Requirements:</strong> Fast response times for event listings, registration, and ticket processing to ensure a smooth user experience.</li>
+    <li><strong>System Constraints:</strong> The application will run on local servers initially using XAMPP, WAMP, or MAMP environments, with potential future scaling to cloud hosting.</li>
+
                     </p>
                   </div>
                 )}
@@ -188,18 +216,22 @@ export default function CapstoneSection() {
                     <div className="flex justify-between items-start mb-6">
                       <h3 className="text-2xl font-bold text-white">Wireframes</h3>
                       <a 
-                        href="/docs/wireframes.pdf" 
+                        href="https://www.figma.com/design/vBg6K0SKkcZcGsJSbGYXXA/EventRaze?node-id=0-1" 
                         target="_blank"
                         className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg hover:opacity-90 transition-all text-sm font-medium text-white group"
                       >
                         <svg className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                         </svg>
-                        View Document
+                        Figma Design
                       </a>
                     </div>
                     <p className="text-gray-300">
-                      [Your wireframes content]
+                    The Wireframes for EventRaze depict the layout of the application's core pages, such as the event listing, user registration, ticket purchase flow, and feedback collection form. These wireframes focus on ensuring:
+
+<li>Intuitive Navigation: Clear, easy-to-understand layouts that guide users through the event registration and ticketing process.</li>
+<li>Responsiveness: The wireframes are designed with mobile and tablet views in mind, ensuring that EventRaze works seamlessly on different devices.</li>
+<li></li>User Experience (UX): The wireframes prioritize a simple, engaging experience that minimizes friction during event registration and payment.
                     </p>
                   </div>
                 )}
@@ -220,7 +252,11 @@ export default function CapstoneSection() {
                       </a>
                     </div>
                     <p className="text-gray-300">
-                      [Your status content]
+                    The Status section outlines the current stage of development, including:
+
+<li>Completed: Features such as event creation, user registration, and basic ticketing functionality have been implemented and are functional.</li>
+<li>Ongoing: UI enhancements, real-time analytics for event organizers, and feedback collection features are under development.</li>
+<li>Future Work: The plan includes transitioning to cloud hosting and further improvements to the event scheduling and ticketing processes, based on user feedback.</li>
                     </p>
                   </div>
                 )}
@@ -230,18 +266,18 @@ export default function CapstoneSection() {
                     <div className="flex justify-between items-start mb-6">
                       <h3 className="text-2xl font-bold text-white">Implementation</h3>
                       <a 
-                        href="/docs/implementation.pdf" 
+                        href="NOT FOUND" 
                         target="_blank"
                         className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg hover:opacity-90 transition-all text-sm font-medium text-white group"
                       >
                         <svg className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                         </svg>
-                        View Document
+                        Pending...
                       </a>
                     </div>
                     <p className="text-gray-300">
-                      [Your implementation content]
+                      The implementation of the system is currently <strong>in progress</strong>. The system is deployed on <strong>local servers using XAMPP, WAMP, or MAMP</strong> for testing. Future iterations include a potential transition to cloud hosting to improve scalability and performance.
                     </p>
                   </div>
                 )}
@@ -260,14 +296,42 @@ export default function CapstoneSection() {
                   <div className="absolute -left-2.5 mt-1.5 h-5 w-5 rounded-full border-2 border-purple-500 bg-darkColor"></div>
                   <h4 className="text-xl font-bold text-white">Project Initiation</h4>
                   <p className="text-gray-300 mt-2">Initial planning and requirement gathering</p>
-                  <span className="text-sm text-gray-400">January 2024</span>
+                  <span className="text-sm text-gray-400">September 2024</span>
                 </div>
                 
                 <div className="relative pl-8 pb-8">
                   <div className="absolute -left-2.5 mt-1.5 h-5 w-5 rounded-full border-2 border-purple-500 bg-darkColor"></div>
+                  <h4 className="text-xl font-bold text-white">Planning Phase</h4>
+                  <p className="text-gray-300 mt-2">Project Planning and Team Charter</p>
+                  <span className="text-sm text-gray-400">October 2024</span>
+                </div>
+
+                <div className="relative pl-7 pb-7">
+                  <div className="absolute -left-2.5 mt-1.5 h-5 w-5 rounded-full border-2 border-purple-500 bg-darkColor"></div>
                   <h4 className="text-xl font-bold text-white">Design Phase</h4>
                   <p className="text-gray-300 mt-2">Wireframing and architecture planning</p>
-                  <span className="text-sm text-gray-400">February 2024</span>
+                  <span className="text-sm text-gray-400">November 2024</span>
+                </div>
+
+                <div className="relative pl-7 pb-7">
+                  <div className="absolute -left-2.5 mt-1.5 h-5 w-5 rounded-full border-2 border-purple-500 bg-darkColor"></div>
+                  <h4 className="text-xl font-bold text-white">Development Phase</h4>
+                  <p className="text-gray-300 mt-2">Programming frontend and Backend</p>
+                  <span className="text-sm text-gray-400">January 2025</span>
+                </div>
+
+                <div className="relative pl-7 pb-7">
+                  <div className="absolute -left-2.5 mt-1.5 h-5 w-5 rounded-full border-2 border-purple-500 bg-darkColor"></div>
+                  <h4 className="text-xl font-bold text-white">Debugging</h4>
+                  <p className="text-gray-300 mt-2">Looking for build errors and debugging the final version</p>
+                  <span className="text-sm text-gray-400">February 2025</span>
+                </div>
+
+                <div className="relative pl-7 pb-7">
+                  <div className="absolute -left-2.5 mt-1.5 h-5 w-5 rounded-full border-2 border-purple-500 bg-darkColor"></div>
+                  <h4 className="text-xl font-bold text-white">Deployment</h4>
+                  <p className="text-gray-300 mt-2">Right now we are working to deployment our app successfully</p>
+                  <span className="text-sm text-gray-400">March 2025</span>
                 </div>
 
                 {/* Add more timeline items as needed */}

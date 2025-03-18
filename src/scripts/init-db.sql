@@ -15,12 +15,12 @@ CREATE TABLE IF NOT EXISTS users (
 );
 
 -- Insert admin user with bcrypt hashed password 'admin123'
--- The password hash below is for 'admin123' - you should change this in production
+-- The password hash below is for 'admin123' -
 INSERT INTO users (firstname, email, password, github_link)
 VALUES (
     'Admin',
     'admin@example.com',
-    '$2b$10$YourHashedPasswordHere',  -- Replace this with an actual bcrypt hash
+    '$2b$10$YourHashedPasswordHere',
     'https://github.com'
 )
 ON CONFLICT (email) DO NOTHING; 

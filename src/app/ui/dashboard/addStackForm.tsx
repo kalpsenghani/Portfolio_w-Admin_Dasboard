@@ -41,7 +41,7 @@ export default function AddStackForm({ edgestore }: { edgestore: MyEdgeStoreRout
         </label>
         <input
           className="w-full rounded-lg border border-gray-200 bg-transparent p-3 text-sm"
-          placeholder="Lien de la techno *"
+          placeholder="Techno link *"
           type="text"
           name="stack_link"
           id="stack_link"

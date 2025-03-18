@@ -10,7 +10,7 @@ export default function SignOutButton() {
         py-3 text-center text-sm font-semibold text-darkColor shadow duration-300 hover:bg-secondaryLight
         hover:bg-gradient-to-r hover:text-lightColor 2xl:text-base"
     >
-      Disconnect
+      SignOut
     </button>
   );
 }
