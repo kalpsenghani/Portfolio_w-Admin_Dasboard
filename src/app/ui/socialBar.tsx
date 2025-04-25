@@ -63,7 +63,7 @@ export default function SocialBar() {
 
       {/* Instagram */}
       <a 
-        href="https://instagram.com/your-profile" 
+        href="https://www.instagram.com/kalp_senghani/" 
         target="_blank" 
         rel="noopener noreferrer"
         className="group relative p-2"
